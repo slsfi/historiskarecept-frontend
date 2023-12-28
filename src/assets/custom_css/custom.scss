@@ -188,3 +188,240 @@
   }
 
 */
+
+/* Override CSS variables */
+:root {
+  --primary-color:                    #610045;
+  --primary-color-rgb:                97, 0, 69;
+  --secondary-color:                  #cfd3d6;
+  --default-link-color:               #c72297;
+  --main-background-color:            #f2f2f2;
+
+  --fab-button-primary-background-color:   #87597a;
+  --fab-button-secondary-background-color: #e1d3dd;
+}
+
+ion-app[class][class] {
+  --secondary-toolbar-color: #fefacb;
+
+  --side-menu-background-color:                  #dadee1;
+  --side-menu-divider-color:                     #b5b5b5;
+  --side-menu-collection-title-background-color: #bdc1c4;
+  --side-menu-back-button-background-color:      var(--side-menu-background-color);
+}
+
+/* Custom, project specific styles */
+
+:root {
+  --glossary-word-background-color: rgb(234, 222, 230);
+}
+
+/* Home page */
+page-home {
+  .title-wrapper .banner-title {
+    background-color: var(--primary-color);
+    color: var(--primary-color-contrast);
+    font-weight: bold;
+    opacity: 1;
+  }
+
+  .portrait-mode {
+    .banner {
+      background-color: #250101;
+    }
+    .title-wrapper .site-title.site-title {
+      font-family: hummingbird, sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 5em;
+      margin-top: 5.5rem;
+      text-align: center;
+      line-height: 0.6;
+    }
+    .text-content .footer.footer.footer.footer {
+      text-align: center;
+    }
+  }
+}
+
+page-about .map-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 1.5em;
+    margin: 2em 0 2em 4.5em;
+}
+@media screen and (max-width: 550px) {
+    page-about .map-legend {
+        margin: 2em 0;
+    }
+}
+page-about .map-legend-column {
+	width: 100%;
+    max-width: 320px;
+}
+page-about .map-legend h2 {
+	font-size: 1.0em;
+    font-weight: bold;
+}
+page-about .map-legend p {
+	margin: 0;
+}
+page-about .map-legend ol {
+    list-style: none;
+    margin-top: 0;
+    padding-left: 1.25em;
+}
+page-about .map-legend li {
+	padding-bottom: 0.25em;
+}
+page-about figure.no-margins-image {
+    margin: 0;
+}
+page-about ul li {
+    padding-bottom: 0.35em;
+}
+page-about table.website-change-log {
+    margin-top: 2em;
+}
+page-about table.website-change-log th,
+page-about table.website-change-log td {
+    text-align: left;
+    padding: 0.25em 1.5em 0.25em 0;
+}
+page-about table.website-change-log th {
+    border-bottom: 1px solid #222;
+}
+page-about table.website-change-log td {
+    border-bottom: 1px solid #cecece;
+}
+page-about table.website-change-log tr:last-child td {
+    border-bottom: 0;
+}
+
+/* Glossary words in read texts */
+/*
+reading-text .tei.show_comments .glossaryWord {
+	background-color: var(--glossary-word-background-color);
+	cursor: help;
+}
+*/
+
+/* Read popover settings */
+/*
+read-popover-page ion-list.list > ion-item.item ion-label.label > img.asterix {
+	display: none;
+}
+read-popover-page ion-list.list > ion-item.item ion-label.show_comments {
+	background-color: var(--glossary-word-background-color);
+}
+*/
+
+/* Stilar för att visa XML-kommentarer, ta bort ur produktion (också ur inc_common.xsl). */
+div.tei span.xmlComment {
+	color: rgb(17, 126, 8);
+	font-family: 'Courier New', Courier, monospace;
+	display: inline;
+}
+div.tei span.xmlComment::before {
+	content: "<-- ";
+}
+div.tei span.xmlComment::after {
+	content: " -->";
+}
+page-introduction div.tei span.xmlComment {
+	display: none;
+}
+
+/* Stilar för ordförklaringar i kommentarkolumnen */
+comments div.tei ul.glossary {
+	list-style: none;
+	padding-left: 0;
+}
+comments div.tei ul.glossary > li {
+	margin-bottom: 0.9em;
+	margin-left: 1.5em;
+	text-indent: -1.5em;
+}
+
+/* temporära stilar för kommentarspalten - DEMO */
+comments div.tei h3,
+comments div.tei h4 {
+	margin: 1.5em 0 0.5em 0;
+}
+comments div.tei h3 {
+	font-variant: small-caps;
+	font-size: 1.5em;
+}
+comments div.tei table {
+	margin: 0 0 1em 0;
+}
+
+/* Kolumnen med måttenheter */
+text-legend div.tei.legend-markdown-content h3,
+text-legend div.tei.legend-markdown-content h4 {
+	margin: 1.5em 0 0.5em 0;
+}
+text-legend div.tei.legend-markdown-content p.noIndent + h3 {
+    margin-top: 1em;
+}
+text-legend div.tei.legend-markdown-content h3 + h4 {
+    margin-top: 0.55em;
+}
+text-legend div.tei.legend-markdown-content h4 {
+    font-size: 1.0588em;
+}
+text-legend div.tei.legend-markdown-content table {
+	margin: 0 0 1em 0;
+}
+
+/* Dölj manuskriptkolumnens toggle för att visa ändringar inarbetade */
+manuscripts .text-select-wrapper {
+  display: none;
+}
+
+/* Sökinstruktionerna i avancerade sökningen */
+page-elastic-search .info.markdown details {
+    padding: .5em .5em 0;
+}
+
+page-elastic-search .info.markdown summary {
+    text-decoration: none !important;
+    font-weight: bold;
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+page-elastic-search .info.markdown details[open] {
+    border-bottom: 1px solid #aaa;
+    padding: .5em;
+}
+
+page-elastic-search .info.markdown details[open] summary {
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+page-elastic-search .info.markdown details ul li {
+    line-height: 1.5;
+}
+
+page-elastic-search .info.markdown details ul li + li {
+    padding-top: 0.75em;
+}
+
+page-elastic-search .info.markdown .query_example {
+    background-color: #fdfdfd;
+    padding: 0.125em 0.25em;
+    color: var(--button-background-color);
+    font-size: 0.889em;
+    font-family: monospace;
+    border-radius: 3px;
+    border: 1px solid var(--button-background-color);
+}
+
+/* Cookiebannern */
+#cky-consent,
+#cky-settings-popup {
+	font-family: var(--font-stack-app-base);
+}
