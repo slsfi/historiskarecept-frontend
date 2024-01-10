@@ -1,6 +1,6 @@
-# ’Granska’ frontend of Historiska recept, granska-historiskarecept.sls.fi
+# Production frontend of Historiska recept, historiskarecept.sls.fi
 
-This branch contains the internal, ”granska” frontend app of the digital edition Historiska recept, [https://granska-historiskarecept.sls.fi/][granska-historiskarecept]. It is based on [`digital-edition-frontend-ng`][digital-edition-frontend-ng], the frontend app of the [SLS][SLS] platform for building digital edition web apps.
+This branch contains the production frontend app of the digital edition Historiska recept, [https://historiskarecept.sls.fi/][historiskarecept]. It is based on [`digital-edition-frontend-ng`][digital-edition-frontend-ng], the frontend app of the [SLS][SLS] platform for building digital edition web apps.
 
 
 The app is built on [Angular][angular] and uses [Ionic][ionic] web components.
@@ -96,7 +96,7 @@ The platform consists of an [Angular frontend app][digital-edition-frontend-ng],
 [git_bash]: https://gitforwindows.org/
 [gith_bash_tutorial]: https://www.atlassian.com/git/tutorials/git-bash
 [github_desktop]: https://desktop.github.com/
-[granska-historiskarecept]: https://granska-historiskarecept.sls.fi/
+[historiskarecept]: https://historiskarecept.sls.fi/
 [ionic]: https://ionicframework.com/
 [node.js]: https://nodejs.org/
 [npm]: https://www.npmjs.com/get-npm

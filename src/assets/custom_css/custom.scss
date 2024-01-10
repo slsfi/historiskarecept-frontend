@@ -213,10 +213,6 @@ ion-app[class][class] {
 
 /* Custom, project specific styles */
 
-:root {
-  --glossary-word-background-color: rgb(234, 222, 230);
-}
-
 /* Home page */
 page-home {
   .title-wrapper .banner-title {
@@ -300,64 +296,6 @@ page-about table.website-change-log tr:last-child td {
     border-bottom: 0;
 }
 
-/* Glossary words in read texts */
-/*
-reading-text .tei.show_comments .glossaryWord {
-	background-color: var(--glossary-word-background-color);
-	cursor: help;
-}
-*/
-
-/* Read popover settings */
-/*
-read-popover-page ion-list.list > ion-item.item ion-label.label > img.asterix {
-	display: none;
-}
-read-popover-page ion-list.list > ion-item.item ion-label.show_comments {
-	background-color: var(--glossary-word-background-color);
-}
-*/
-
-/* Stilar för att visa XML-kommentarer, ta bort ur produktion (också ur inc_common.xsl). */
-div.tei span.xmlComment {
-	color: rgb(17, 126, 8);
-	font-family: 'Courier New', Courier, monospace;
-	display: inline;
-}
-div.tei span.xmlComment::before {
-	content: "<-- ";
-}
-div.tei span.xmlComment::after {
-	content: " -->";
-}
-page-introduction div.tei span.xmlComment {
-	display: none;
-}
-
-/* Stilar för ordförklaringar i kommentarkolumnen */
-comments div.tei ul.glossary {
-	list-style: none;
-	padding-left: 0;
-}
-comments div.tei ul.glossary > li {
-	margin-bottom: 0.9em;
-	margin-left: 1.5em;
-	text-indent: -1.5em;
-}
-
-/* temporära stilar för kommentarspalten - DEMO */
-comments div.tei h3,
-comments div.tei h4 {
-	margin: 1.5em 0 0.5em 0;
-}
-comments div.tei h3 {
-	font-variant: small-caps;
-	font-size: 1.5em;
-}
-comments div.tei table {
-	margin: 0 0 1em 0;
-}
-
 /* Kolumnen med måttenheter */
 text-legend div.tei.legend-markdown-content h3,
 text-legend div.tei.legend-markdown-content h4 {
@@ -374,11 +312,6 @@ text-legend div.tei.legend-markdown-content h4 {
 }
 text-legend div.tei.legend-markdown-content table {
 	margin: 0 0 1em 0;
-}
-
-/* Dölj manuskriptkolumnens toggle för att visa ändringar inarbetade */
-manuscripts .text-select-wrapper {
-  display: none;
 }
 
 /* Sökinstruktionerna i avancerade sökningen */

@@ -1,8 +1,8 @@
 {
-  "name": "granska-historiskarecept.sls.fi",
-  "version": "1.1.0-granska.1",
-  "description": "Frontend of granska-historiskarecept.sls.fi based on the Angular web app for the SLS Digital Edition Platform",
-  "homepage": "https://github.com/slsfi/historiskarecept-frontend/tree/granska#readme",
+  "name": "historiskarecept.sls.fi",
+  "version": "1.2.0",
+  "description": "Frontend of historiskarecept.sls.fi based on the Angular web app for the SLS Digital Edition Platform",
+  "homepage": "https://github.com/slsfi/historiskarecept-frontend#readme",
   "license": "MIT",
   "private": true,
   "scripts": {

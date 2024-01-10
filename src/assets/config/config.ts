@@ -2,10 +2,10 @@ type Config = { [key: string]: any }
 
 export const config: Config = {
   app: {
-    siteURLOrigin: "https://granska-historiskarecept.sls.fi",
+    siteURLOrigin: "https://historiskarecept.sls.fi",
     projectNameDB: "historiskarecept",
     projectId: 11,
-    backendBaseURL: "https://granska-api.sls.fi/digitaledition",
+    backendBaseURL: "https://api.sls.fi/digitaledition",
     i18n: {
       languages: [
         { code: "sv", label: "Svenska", region: "FI" }
@@ -36,7 +36,7 @@ export const config: Config = {
     },
     highlightSearchMatches: true,
     order: [
-      [541, 2560, 1088, 812, 1089, 1367, 2561, 2562, 2563, 2564, 2565]
+      [541, 2560, 1088, 812, 1089, 1367]
     ]
   },
   ebooks: [
@@ -247,7 +247,7 @@ export const config: Config = {
         print: false
       },
       manuscriptsFormats: {
-        xml: true,
+        xml: false,
         html: false,
         xhtml: false,
         txt: false,
