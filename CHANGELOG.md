@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Set up project files, config, custom CSS and translations for production site.
+- Optimize Adobe Fonts request for font used in site title on home page.
 
 
 
