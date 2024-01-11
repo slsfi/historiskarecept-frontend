@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Added
+
+- Metadata tag for instructing crawlers not to index pages on granska-topelius.sls.fi.
+
 ### Changed
 
 - Optimize Adobe Fonts request for font used in site title on home page.
