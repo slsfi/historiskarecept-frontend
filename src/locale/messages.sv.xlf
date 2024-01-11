@@ -99,13 +99,13 @@
     <unit id="CollectionIntroduction.Introduction">
       <segment state="initial">
         <source>Inledning</source>
-        <target>Inledning</target>
+        <target>Om handskriften</target>
       </segment>
     </unit>
     <unit id="CollectionIntroduction.None">
       <segment state="initial">
         <source>Inledningen kunde inte laddas.</source>
-        <target>Inledningen kunde inte laddas.</target>
+        <target>Beskrivningen av handskriften kunde inte laddas.</target>
       </segment>
     </unit>
     <unit id="CollectionSideMenu.Back">
@@ -471,7 +471,7 @@
     <unit id="ElasticSearch.Collection">
       <segment state="initial">
         <source>Delutgåva</source>
-        <target>Delutgåva</target>
+        <target>Receptsamling</target>
       </segment>
     </unit>
     <unit id="ElasticSearch.CommentaryTo">
@@ -891,13 +891,13 @@
     <unit id="Legend.Legend">
       <segment state="initial">
         <source>Teckenförklaringar</source>
-        <target>Teckenförklaringar</target>
+        <target>Måttenheter</target>
       </segment>
     </unit>
     <unit id="Legend.None">
       <segment state="initial">
         <source>Inga teckenförklaringar tillgängliga.</source>
-        <target>Inga teckenförklaringar tillgängliga.</target>
+        <target>Inga måttenheter tillgängliga.</target>
       </segment>
     </unit>
     <unit id="MainSideMenu.AriaLabel">
@@ -909,7 +909,7 @@
     <unit id="MainSideMenu.CollectionsGroup1">
       <segment state="initial">
         <source>Innehåll</source>
-        <target>Innehåll</target>
+        <target>Receptsamlingarna</target>
       </segment>
     </unit>
     <unit id="MainSideMenu.CollectionsGroup2">
@@ -987,19 +987,19 @@
     <unit id="Manuscripts.Error">
       <segment state="initial">
         <source>Ett fel har uppstått. Manuskript kunde inte hämtas.</source>
-        <target>Ett fel har uppstått. Manuskript kunde inte hämtas.</target>
+        <target>Ett fel har uppstått. Transkriptionen kunde inte hämtas.</target>
       </segment>
     </unit>
     <unit id="Manuscripts.Manuscript">
       <segment state="initial">
         <source>Manuskript</source>
-        <target>Manuskript</target>
+        <target>Transkription</target>
       </segment>
     </unit>
     <unit id="Manuscripts.None">
       <segment state="initial">
         <source>Inga manuskriptutskrifter.</source>
-        <target>Inga manuskriptutskrifter.</target>
+        <target>Inga transkriptioner.</target>
       </segment>
     </unit>
     <unit id="Manuscripts.SelectMsDialogSubtitle">
@@ -1497,19 +1497,19 @@
     <unit id="Site.MetaDescription.Home">
       <segment state="initial">
         <source>En generell beskrivning av webbplatsen för sökmotorer.</source>
-        <target>En generell beskrivning av webbplatsen för sökmotorer.</target>
+        <target>Finländska receptsamlingar från 1700- och 1800-talen.</target>
       </segment>
     </unit>
     <unit id="Site.Subtitle">
       <segment state="initial">
         <source>Webbplatsens undertitel</source>
-        <target>Webbplatsens undertitel</target>
+        <target></target>
       </segment>
     </unit>
     <unit id="Site.Title">
       <segment state="initial">
         <source>Webbplatsens titel</source>
-        <target>Webbplatsens titel</target>
+        <target>Historiska recept</target>
       </segment>
     </unit>
     <unit id="TopMenu.About">
@@ -1545,7 +1545,7 @@
     <unit id="TopMenu.LogoAltText">
       <segment state="initial">
         <source>Logo</source>
-        <target>Logo</target>
+        <target>Svenska litteratursällskapet i Finland r.f.</target>
       </segment>
     </unit>
     <unit id="TopMenu.Menu">
