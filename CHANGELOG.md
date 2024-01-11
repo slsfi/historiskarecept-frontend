@@ -8,16 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-## [1.1.0-granska.1] – 2023-12-28
-
-### Added
-
-- Project frontend images and files.
-
 ### Changed
 
-- Project config, custom CSS and translations.
-- README with project specific details and information on updating, releasing, building and deploying the app.
+- Optimize Adobe Fonts request for font used in site title on home page.
 
 
 
@@ -60,6 +53,19 @@ siteLogoDimensions: {
 
 - Paths to font files in @font-face rules from absolute to relative. ([2dd2bf3](https://github.com/slsfi/digital-edition-frontend-ng/commit/2dd2bf34d76233f5eafc15e607a491a7800e1a38))
 - Update Ionic to 7.6.3 and Ionicons to 7.2.2. ([f35d148](https://github.com/slsfi/digital-edition-frontend-ng/commit/f35d14831bec9aa7430c43a4bd7854c3f77871b9))
+
+
+
+## [1.1.0-granska.1] – 2023-12-28
+
+### Added
+
+- Project frontend images and files.
+
+### Changed
+
+- Project config, custom CSS and translations.
+- README with project specific details and information on updating, releasing, building and deploying the app.
 
 
 
