@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Added
+
+- CookieYes cookie banner and Matomo analytics code snippets to index.html.
+
 ### Changed
 
 - Set up project files, config, custom CSS and translations for production site.
