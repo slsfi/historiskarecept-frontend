@@ -8,15 +8,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.2.0-production.1] – 2024-01-11
+
 ### Added
 
-- CookieYes cookie banner and Matomo analytics code snippets to index.html.
+- CookieYes cookie banner and Matomo analytics code snippets to index.html. ([520c2f8](https://github.com/slsfi/historiskarecept-frontend/commit/520c2f81e4ccaefc85537324093418e692fa1420))
 
 ### Changed
 
-- Set up project files, config, custom CSS and translations for production site.
-- Optimize Adobe Fonts request for font used in site title on home page.
-- Optimize home page banner image (reduce size and quality).
+- Set up project files, config, custom CSS and translations for production site. ([0b7611a](https://github.com/slsfi/historiskarecept-frontend/commit/0b7611ad0af4543ace3fca53ade800bf521f1c98))
+- Optimize Adobe Fonts request for font used in site title on home page. ([139d40b](https://github.com/slsfi/historiskarecept-frontend/commit/139d40b11efd6e89f277fc6c4a869afb9d75cfa8))
+- Optimize home page banner image (reduce size and quality). ([8cf3709](https://github.com/slsfi/historiskarecept-frontend/commit/8cf3709efe6a9b903711a8bc1b02a0c62b6d0e83))
 
 
 
@@ -148,3 +152,5 @@ siteLogoDimensions: {
 [1.0.2]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.1...v1.0.2
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
+
+[1.2.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/releases/tag/1.2.0-production.1
