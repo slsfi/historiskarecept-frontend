@@ -10,17 +10,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.2.0-production.1] – 2024-01-11
-
-### Added
-
-- CookieYes cookie banner and Matomo analytics code snippets to index.html. ([520c2f8](https://github.com/slsfi/historiskarecept-frontend/commit/520c2f81e4ccaefc85537324093418e692fa1420))
+## [1.2.1-production.1] – 2024-01-16
 
 ### Changed
 
-- Set up project files, config, custom CSS and translations for production site. ([0b7611a](https://github.com/slsfi/historiskarecept-frontend/commit/0b7611ad0af4543ace3fca53ade800bf521f1c98))
-- Optimize Adobe Fonts request for font used in site title on home page. ([139d40b](https://github.com/slsfi/historiskarecept-frontend/commit/139d40b11efd6e89f277fc6c4a869afb9d75cfa8))
-- Optimize home page banner image (reduce size and quality). ([8cf3709](https://github.com/slsfi/historiskarecept-frontend/commit/8cf3709efe6a9b903711a8bc1b02a0c62b6d0e83))
+- Set port mapping in compose.yml to a free port. ([06d5ec7](https://github.com/slsfi/historiskarecept-frontend/commit/06d5ec792beb493f46b14b3a0c8ac16a50b85e35))
+- Merge upstream, original repository [`v1.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.1) into `production` branch. ([d32b1fe](https://github.com/slsfi/historiskarecept-frontend/commit/d32b1fedceb5d219765ff5b8d232614041daad5b))
 
 
 
@@ -33,6 +28,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Legacy setup code from Angular 15 to 17 migration. Angular 17 introduced several changes to the `app.module.\*`, `main.server.ts`, `main.ts`, `server.ts` and `tsconfig.\*` files. During the original v15 -> v17 update of the app all of these changes were not implemented. This fix attempts to align the app with the setup of a new modules based Angular 17 app that has SSR and i18n enabled. ([2b7c94d](https://github.com/slsfi/digital-edition-frontend-ng/commit/2b7c94d368adc51de871322ea1e4dcb3df74f5fd))
+
+
+
+## [1.2.0-production.1] – 2024-01-11
+
+### Added
+
+- CookieYes cookie banner and Matomo analytics code snippets to index.html. ([520c2f8](https://github.com/slsfi/historiskarecept-frontend/commit/520c2f81e4ccaefc85537324093418e692fa1420))
+
+### Changed
+
+- Set up project files, config, custom CSS and translations for production site. ([0b7611a](https://github.com/slsfi/historiskarecept-frontend/commit/0b7611ad0af4543ace3fca53ade800bf521f1c98))
+- Optimize Adobe Fonts request for font used in site title on home page. ([139d40b](https://github.com/slsfi/historiskarecept-frontend/commit/139d40b11efd6e89f277fc6c4a869afb9d75cfa8))
+- Optimize home page banner image (reduce size and quality). ([8cf3709](https://github.com/slsfi/historiskarecept-frontend/commit/8cf3709efe6a9b903711a8bc1b02a0c62b6d0e83))
 
 
 
@@ -166,4 +175,5 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.2.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.0-production.1...1.2.1-production.1
 [1.2.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/releases/tag/1.2.0-production.1
