@@ -10,17 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.2.0-granska.1] – 2024-01-11
-
-### Added
-
-- Metadata tag for instructing crawlers not to index pages on granska-topelius.sls.fi. ([99ee703](https://github.com/slsfi/historiskarecept-frontend/commit/99ee703484b3ea9b20734e963bdfd4f31c6ca218))
+## [1.2.1-granska.1] – 2024-01-16
 
 ### Changed
 
-- Merge upstream, original repository [`v1.2.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.0) into `granska` branch. ([5dc4b38](https://github.com/slsfi/historiskarecept-frontend/commit/5dc4b383022b1070f087d8d9144b2c90493ce32c))
-- Optimize Adobe Fonts request for font used in site title on home page. ([cd03253](https://github.com/slsfi/historiskarecept-frontend/commit/cd03253db02d2b3d2331b8afd016ee9c132c2e45))
-- Optimize home page banner image (reduce size and quality). ([84ef15b](https://github.com/slsfi/historiskarecept-frontend/commit/84ef15bf62d680be3ba5f55c198ac3852fdf556a))
+- Merge upstream, original repository [`v1.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.1) into `granska` branch. ([603458c](https://github.com/slsfi/historiskarecept-frontend/commit/603458c1d46d57cc4810419a74f33d0d8a4e187c))
 
 
 
@@ -33,6 +27,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Legacy setup code from Angular 15 to 17 migration. Angular 17 introduced several changes to the `app.module.\*`, `main.server.ts`, `main.ts`, `server.ts` and `tsconfig.\*` files. During the original v15 -> v17 update of the app all of these changes were not implemented. This fix attempts to align the app with the setup of a new modules based Angular 17 app that has SSR and i18n enabled. ([2b7c94d](https://github.com/slsfi/digital-edition-frontend-ng/commit/2b7c94d368adc51de871322ea1e4dcb3df74f5fd))
+
+
+
+## [1.2.0-granska.1] – 2024-01-11
+
+### Added
+
+- Metadata tag for instructing crawlers not to index pages on granska-topelius.sls.fi. ([99ee703](https://github.com/slsfi/historiskarecept-frontend/commit/99ee703484b3ea9b20734e963bdfd4f31c6ca218))
+
+### Changed
+
+- Merge upstream, original repository [`v1.2.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.0) into `granska` branch. ([5dc4b38](https://github.com/slsfi/historiskarecept-frontend/commit/5dc4b383022b1070f087d8d9144b2c90493ce32c))
+- Optimize Adobe Fonts request for font used in site title on home page. ([cd03253](https://github.com/slsfi/historiskarecept-frontend/commit/cd03253db02d2b3d2331b8afd016ee9c132c2e45))
+- Optimize home page banner image (reduce size and quality). ([84ef15b](https://github.com/slsfi/historiskarecept-frontend/commit/84ef15bf62d680be3ba5f55c198ac3852fdf556a))
 
 
 
@@ -179,5 +187,6 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.2.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.0-granska.1...1.2.1-granska.1
 [1.2.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.1.0-granska.1...1.2.0-granska.1
 [1.1.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/releases/tag/1.1.0-granska.1
