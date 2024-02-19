@@ -5,7 +5,7 @@
     <text-changer *ngIf="!mobileMode"
           [textItemID]="textItemID"
           [textPosition]="textPosition"
-          [parentPageType]="'page-text'"
+          [parentPageType]="'text'"
           class="text-changer-desktop-mode"
     ></text-changer>
 
@@ -247,7 +247,7 @@
 <text-changer *ngIf="mobileMode"
       [textItemID]="textItemID"
       [textPosition]="textPosition"
-      [parentPageType]="'page-text'"
+      [parentPageType]="'text'"
       class="text-changer-mobile-mode"
 ></text-changer>
 
@@ -300,14 +300,20 @@
         (setMobileModeActiveText)="setActiveMobileModeViewType(undefined, $event)"
   ></comments>
 
-  <facsimiles *ngIf="view.type === 'facsimiles'"
-        [textItemID]="textItemID"
-        [facsID]="view.id"
-        [imageNr]="view.nr"
-        (selectedFacsID)="updateViewProperty('id', $event, i)"
-        (selectedImageNr)="updateViewProperty('nr', $event, i)"
-        (selectedFacsName)="updateViewProperty('title', $event, i, false)"
-  ></facsimiles>
+  <ng-container *ngIf="view.type === 'facsimiles'">
+    @defer (on immediate) {
+      <facsimiles
+            [textItemID]="textItemID"
+            [facsID]="view.id"
+            [imageNr]="view.nr"
+            (selectedFacsID)="updateViewProperty('id', $event, i)"
+            (selectedImageNr)="updateViewProperty('nr', $event, i)"
+            (selectedFacsName)="updateViewProperty('title', $event, i, false)"
+      ></facsimiles>
+    } @loading (minimum 1s) {
+      <ion-spinner class="loading" name="crescent"></ion-spinner>
+    }
+  </ng-container>
 
   <manuscripts *ngIf="view.type === 'manuscripts'"
         [textItemID]="textItemID"
@@ -331,12 +337,18 @@
         (openNewLegendView)="openNewView($event)"
   ></variants>
   
-  <illustrations *ngIf="view.type === 'illustrations'"
-        [singleImage]="view.image"
-        [textItemID]="textItemID"
-        (showAllImages)="updateIllustrationViewImage($event)"
-        (setMobileModeActiveText)="setActiveMobileModeViewType(undefined, $event)"
-  ></illustrations>
+  <ng-container *ngIf="view.type === 'illustrations'">
+    @defer {
+      <illustrations
+            [singleImage]="view.image"
+            [textItemID]="textItemID"
+            (showAllImages)="updateIllustrationViewImage($event)"
+            (setMobileModeActiveText)="setActiveMobileModeViewType(undefined, $event)"
+      ></illustrations>
+    } @loading (minimum 1s) {
+      <ion-spinner class="loading" name="crescent"></ion-spinner>
+    }
+  </ng-container>
 
   <text-legend *ngIf="view.type === 'legend'"
         [itemId]="textItemID"
@@ -478,7 +490,7 @@
         [class.show_emendations]="viewOptionsService.show.emendations"
         [class.show_abbreviations]="viewOptionsService.show.abbreviations"
         [ngStyle]="{'position': toolTipPosType, 'top': toolTipPosition.top, 'left': toolTipPosition.left, 'max-width': toolTipMaxWidth, 'transform': 'scale(' + toolTipScaleValue + ')'}"
-        [innerHTML]="toolTipText"
+        [innerHTML]="toolTipText | trustHtml"
         [MathJax]="toolTipText"
   ></div>
   <div tabindex="-1"
@@ -505,6 +517,6 @@
         ></ion-icon>
       </ion-button>
     </div>
-    <div class="infoOverlayContent" [innerHTML]="infoOverlayText" [MathJax]="infoOverlayText"></div>
+    <div class="infoOverlayContent" [innerHTML]="infoOverlayText | trustHtml" [MathJax]="infoOverlayText"></div>
   </div>
 </ng-template>

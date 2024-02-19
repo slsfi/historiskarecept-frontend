@@ -1,18 +1,18 @@
 import { Component, Inject, Input, LOCALE_ID, OnDestroy, OnInit } from '@angular/core';
 import { AsyncPipe, DOCUMENT, NgClass, NgFor, NgIf, NgStyle, NgTemplateOutlet } from '@angular/common';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { PRIMARY_OUTLET, Router, UrlSegment, UrlTree } from '@angular/router';
 import { IonicModule, ModalController } from '@ionic/angular';
 import { catchError, forkJoin, map, Observable, of, Subscription, tap } from 'rxjs';
-import { marked } from 'marked';
 
 import { config } from '@config';
+import { TrustHtmlPipe } from '@pipes/trust-html-pipe';
 import { CollectionContentService } from '@services/collection-content.service';
 import { CollectionsService } from '@services/collections.service';
 import { CollectionTableOfContentsService } from '@services/collection-toc.service';
 import { CommentService } from '@services/comment.service';
+import { DocumentHeadService } from '@services/document-head.service';
 import { HtmlParserService } from '@services/html-parser.service';
-import { MarkdownContentService } from '@services/markdown-content.service';
+import { MarkdownService } from '@services/markdown.service';
 import { ReferenceDataService } from '@services/reference-data.service';
 import { ViewOptionsService } from '@services/view-options.service';
 import { concatenateNames } from '@utility-functions';
@@ -23,7 +23,7 @@ import { concatenateNames } from '@utility-functions';
   selector: 'modal-download-texts',
   templateUrl: './download-texts.modal.html',
   styleUrls: ['./download-texts.modal.scss'],
-  imports: [AsyncPipe, NgClass, NgFor, NgIf, NgStyle, NgTemplateOutlet, IonicModule]
+  imports: [AsyncPipe, NgClass, NgFor, NgIf, NgStyle, NgTemplateOutlet, IonicModule, TrustHtmlPipe]
 })
 export class DownloadTextsModal implements OnDestroy, OnInit {
   @Input() origin: string = '';
@@ -41,7 +41,7 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
   downloadFormatsMs: string[] = [];
   downloadOptionsExist: boolean = false;
   downloadTextSubscription: Subscription | null = null;
-  instructionsText$: Observable<SafeHtml>;
+  instructionsText$: Observable<string | null>;
   introductionMode: boolean = false;
   introductionTitle: string = '';
   loadingCom: boolean = false;
@@ -52,6 +52,7 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
   manuscriptsList$: Observable<any[]>;
   readTextLanguages: string[] = [];
   referenceData: any = null;
+  pageTitleSubscr: Subscription | null = null;
   printTextSubscription: Subscription | null = null;
   printTranslation: string = '';
   publicationData$: Observable<any>;
@@ -69,12 +70,12 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
     private collectionContentService: CollectionContentService,
     private collectionsService: CollectionsService,
     private commentService: CommentService,
-    private mdContentService: MarkdownContentService,
+    private headService: DocumentHeadService,
+    private mdService: MarkdownService,
     private modalCtrl: ModalController,
     private parserService: HtmlParserService,
     private referenceDataService: ReferenceDataService,
     private router: Router,
-    private sanitizer: DomSanitizer,
     private tocService: CollectionTableOfContentsService,
     private viewOptionsService: ViewOptionsService,
     @Inject(LOCALE_ID) private activeLocale: string,
@@ -152,7 +153,7 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
 
     this.urnResolverUrl = this.referenceDataService.getUrnResolverUrl();
     this.currentUrl = this.document.defaultView?.location.href.split('?')[0] || '';
-    this.instructionsText$ = this.getMdContent(
+    this.instructionsText$ = this.mdService.getParsedMdContent(
       this.activeLocale + '-12-' + instructionsTextMdNode
     );
     this.setTranslations();
@@ -166,9 +167,14 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
       this.setCollectionTitle();
 
       if (this.readTextsMode) {
-        // Get publication title from TOC (this way we can also get
-        // correct chapter titles for publications with chapters)
-        this.setPublicationTitle();
+        // Get publication title
+        this.pageTitleSubscr = this.headService.getCurrentPageTitle().subscribe(
+          (pubTitle: string) => {
+            this.publicationTitle = pubTitle?.slice(-1) === '.'
+                  ? pubTitle.slice(0, -1)
+                  : pubTitle;
+          }
+        );
 
         if (this.downloadFormatsEst.length || this.downloadFormatsCom.length) {
           // Get publication data in order to determine if reading-texts and
@@ -211,6 +217,7 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
   ngOnDestroy() {
     this.downloadTextSubscription?.unsubscribe();
     this.printTextSubscription?.unsubscribe();
+    this.pageTitleSubscr?.unsubscribe();
   }
 
   dismiss() {
@@ -767,60 +774,6 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
     }
   }
 
-  private setPublicationTitle() {
-    if (this.collectionId) {
-      this.tocService.getTableOfContents(this.collectionId).subscribe(
-        (toc: any) => {
-          if (toc?.children) {
-            const idParts = this.textItemID.split(';');
-            const searchItemId = idParts[0];
-            const positionId = idParts[1] || '';
-            if (!positionId) {
-              this.recursiveSearchTocForPublicationTitle(toc.children, searchItemId);
-            } else {
-              this.recursiveSearchTocForPublicationTitle(toc.children, searchItemId + ';', true);
-            }
-          }
-        }
-      );
-    }
-  }
-
-  private recursiveSearchTocForPublicationTitle(
-    tocArray: any[],
-    searchId: string,
-    idIncludesPosition: boolean = false,
-    parentTitle?: string
-  ) {
-    if (tocArray?.length) {
-      for (let i = 0; i < tocArray.length; i++) {
-        if (tocArray[i].itemId === searchId) {
-          this.publicationTitle = tocArray[i].text;
-          if (this.publicationTitle?.slice(-1) === '.') {
-            this.publicationTitle = this.publicationTitle.slice(0, -1);
-          }
-          break;
-        } else if (
-          idIncludesPosition &&
-          tocArray[i].itemId?.startsWith(searchId)
-        ) {
-          this.publicationTitle = parentTitle || '';
-          if (this.publicationTitle?.slice(-1) === '.') {
-            this.publicationTitle = this.publicationTitle.slice(0, -1);
-          }
-          break;
-        } else if (tocArray[i].children) {
-          this.recursiveSearchTocForPublicationTitle(
-            tocArray[i].children,
-            searchId,
-            idIncludesPosition,
-            tocArray[i].text
-          );
-        }
-      }
-    }
-  }
-
   // Returns the given title string as a string that can be used as a filename
   private convertToFilename(title: string, maxLength = 70): string {
     let filename = title
@@ -920,17 +873,6 @@ export class DownloadTextsModal implements OnDestroy, OnInit {
       'src="' + (this.document.defaultView?.location.origin ?? '')
             + (this.document.defaultView?.location.pathname.split('/')[1] === this.activeLocale ? '/' + this.activeLocale : '')
             + '/assets/images/'
-    );
-  }
-
-  private getMdContent(fileID: string): Observable<SafeHtml> {
-    return this.mdContentService.getMdContent(fileID).pipe(
-      map((res: any) => {
-        return this.sanitizer.bypassSecurityTrustHtml(marked(res.content));
-      }),
-      catchError((e) => {
-        return of('');
-      })
     );
   }
 

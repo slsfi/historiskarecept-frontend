@@ -19,6 +19,88 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
+## [1.3.1] – 2024-02-19
+
+### Fixes
+
+- Memory leak related to BehaviorSubject-subscription in the download-texts modal. Also, as a precation, unsubscribe from all route subscriptions on component destruction. ([b32dfe4](https://github.com/slsfi/digital-edition-frontend-ng/commit/b32dfe4e74393ecb64aad4f83d415fa60f2f37bb))
+
+
+
+## [1.3.0] – 2024-02-16
+
+### Added
+
+- Config options to enable server-side rendering of the collection side menu and prebuild static versions of the menu: `config.app.ssr.collectionSideMenu` and `config.app.prebuild.staticCollectionMenus`. Both options are booleans. `config.app.ssr.collectionSideMenu` defaults to `false`, which means that rendering of the dynamic collection side menu is not performed on the server, but deferred to the browser. This increases performance on the server for projects that have very large collections (hundreds of texts/collection). `config.app.prebuild.staticCollectionMenus` defaults to `true`, which means that static HTML versions of each collection menu, in each project language, are generated when the Docker image of the app is built. The static collection menus are included in the server-side rendering of collection pages, and then replaced with the dynamic collection menus in the browser. This improves SEO of collection pages when server-side rendering of collection menus is disabled, without degrading the user experience. Setting both new options to `false` puts the least load on the server, but makes the web app less crawlable by robots. **Notice** that the static menus are generated during *build-time* – if the collection table of contents are updated in the backend, a new build has to be created for the changes to be reflected in the static menus. ([a25be18](https://github.com/slsfi/digital-edition-frontend-ng/commit/a25be1899f2e35e3cb8dec398907738bc573427b), [78108e3](https://github.com/slsfi/digital-edition-frontend-ng/commit/78108e32352caed9d111d11d7fefb9f5c8f8ef32), [2ec89c3](https://github.com/slsfi/digital-edition-frontend-ng/commit/2ec89c39b0fdd86447ce53a49b041fcdd41be2c4), [5848028](https://github.com/slsfi/digital-edition-frontend-ng/commit/5848028bc11c3ed0470c3d2735b9038f4c85bbde))
+- Config option to control the generation of a sitemap file in a prebuild step: `config.app.prebuild.sitemap`. Defaults to `true`. ([02d8b65](https://github.com/slsfi/digital-edition-frontend-ng/commit/02d8b6558ce5e80e7c56f896a24bf536d5001c61))
+- Config option to define the intrinsic dimensions of the default banner image on the home page: `config.page.home.bannerImage.intrinsicSize`. The option defaults to `null`, meaning that the `height` and `width` attributes are not set on the image. The option takes an object with `height` and `width` keys and their respective values as numbers (the implicit unit is pixels). Setting the intrinsic dimensions of the image file (defined by the `config.page.home.bannerImage.URL` option) is recommended since the browser can then calculate the aspect ratio of the image, which improves initial page rendering. ([4495d91](https://github.com/slsfi/digital-edition-frontend-ng/commit/4495d915fd9899a28745d7f2de9cd61482e4bf21))
+- Config option to define alternate image sources for the banner image on the home page: `config.page.home.bannerImage.alternateSources`. The option defaults to an empty array, which means that the banner image is rendered like before using the image URL provided in `config.page.home.bannerImage.URL`. The new `alternateSources` option takes an array of objects. If the array is non-empty, the banner image will be created as a [`<picture>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/picture) element with each of the objects in the array specifying a [`<source>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/source) HTML element. The object can contain key-value pairs where the keys are the allowed attributes of the `<source>` element (`media`, `srcset`, `sizes`, `type`, `height`, `width`) and the values are strings or numbers defining the values of the corresponding attributes. For examples, see the forthcoming documentation. Using the `alternateSources` option makes it possible to define responsive images for the banner image (serve different image files based on screen resolution) and serve modern image formats like AVIF for reduced bandwidth. The default image defined by the `URL` option is still needed – it is used as the fallback image defined by the `<img>` element in the `<picture>` element. ([49708b7](https://github.com/slsfi/digital-edition-frontend-ng/commit/49708b7a82290df89df6e8f22ccc4ec780d6fc2d))
+- The current text title in the text-changer component is appended with the value of the `text_two` property of the TOC item if the property exists. The previous/next text buttons have been changed into links and are thus crawlable. ([5848028](https://github.com/slsfi/digital-edition-frontend-ng/commit/5848028bc11c3ed0470c3d2735b9038f4c85bbde))
+- `Vary: User-Agent` HTTP response header to server-side rendered content. This enables more efficient caching and improves SEO by telling browsers etc. that the content varies by user agent (mobile vs desktop). ([1160490](https://github.com/slsfi/digital-edition-frontend-ng/commit/116049015209c7f0e8a124b90c513f1b1194d49a))
+
+### Changed
+
+- Defer loading of the facsimile component on the collection text page to the browser. This increases server-side rendering performance since the component isn’t rendered on the server. ([69fa89a](https://github.com/slsfi/digital-edition-frontend-ng/commit/69fa89ae585b486594f905e649cb46262e38a330), [5bbdaae](https://github.com/slsfi/digital-edition-frontend-ng/commit/5bbdaae6f93b9e7223ddcb122fe031aa896479b6))
+- Defer loading of the illustrations component on the collection text page to the browser. This increases server-side rendering performance since the component isn’t rendered on the server. ([eb60a82](https://github.com/slsfi/digital-edition-frontend-ng/commit/eb60a8292fa912bad9636c980dbafaa75121e081))
+- Defer loading of the epub viewer component to the browser, since it’s not SSR-compatible. The epub title is shown as a `<h1>` placeholder in the server response. Also show pdf title as `<h1>` in the pdf viewer component. ([7658b71](https://github.com/slsfi/digital-edition-frontend-ng/commit/7658b71b5eef956c5d012589dbaa08df6820872a))
+- Refactor requests for flattened collection table of contents to use function in the collection TOC service. ([a6b643b](https://github.com/slsfi/digital-edition-frontend-ng/commit/a6b643b490eccf9241eb221a7dae5d2c41162711))
+- Refactor the download texts modal to get the current text title from the document head service. ([baa0a44](https://github.com/slsfi/digital-edition-frontend-ng/commit/baa0a4437c7bfe0d1e14c04c896d52180f6f38ac))
+- Update the development notes with brief descriptions of dependencies. ([34a1a7c](https://github.com/slsfi/digital-edition-frontend-ng/commit/34a1a7cbdf9ed04dde97a0dc141b0daf8c8d9273))
+- Deps: update `@angular` to 17.2.1. ([e78ed03](https://github.com/slsfi/digital-edition-frontend-ng/commit/e78ed039c3097d6789500324ceb5262399e023c7), [0dffb42](https://github.com/slsfi/digital-edition-frontend-ng/commit/0dffb421f71dd199a8bfd456934168030dbaff5d), [073f167](https://github.com/slsfi/digital-edition-frontend-ng/commit/073f167d93edf3355b80c1ce2db8811e46c3d9b0))
+- Deps: update `@ionic` to 7.7.2. ([5b57491](https://github.com/slsfi/digital-edition-frontend-ng/commit/5b5749109f8ae9d7f468ccd8099782b7e336d531), [7bd4e41](https://github.com/slsfi/digital-edition-frontend-ng/commit/7bd4e414cb3ee0fad266fa83c5f72b8329817904), [ad8b502](https://github.com/slsfi/digital-edition-frontend-ng/commit/ad8b502ef6af7b46482da02a7c5188313ad98eb5))
+- Deps: update `marked` to 12.0.0. ([17dc71e](https://github.com/slsfi/digital-edition-frontend-ng/commit/17dc71e985203472b58a162ec843e9023b42c778), [dd6548b](https://github.com/slsfi/digital-edition-frontend-ng/commit/dd6548be1fb66f1ace074a1d292bd7f1f1ec7927))
+- Deps: update `zone.js` to 0.14.4. ([47d90dd](https://github.com/slsfi/digital-edition-frontend-ng/commit/47d90dddba786fbf00d65deac77ec008862fe072))
+- Deps: update `jasmine-core` to 5.1.2. ([3e2402b](https://github.com/slsfi/digital-edition-frontend-ng/commit/3e2402bd5cbbdbc7ec0914c96d3b85cc287ea06d))
+- Deps: update `ng-extract-i18n-merge` to 2.10.0. ([0387016](https://github.com/slsfi/digital-edition-frontend-ng/commit/03870166b32684955a908d9d771beefdafa6af43))
+- Deps: update `@types/node` to 20.11.19. ([75f2527](https://github.com/slsfi/digital-edition-frontend-ng/commit/75f252755cb0a7028145e9919a80366eec8df7b0), [90bc7f3](https://github.com/slsfi/digital-edition-frontend-ng/commit/90bc7f39c5725f1efe14ee9c5c428aba6f1f04aa), [67e4e80](https://github.com/slsfi/digital-edition-frontend-ng/commit/67e4e801fa6a6997a10e355c511a6f15a6104027))
+
+### Fixed
+
+- Set correct app mode (desktop or mobile) on the server. Prior to this fix the server app would always return the app rendered in desktop mode, regardless of the actual client device. Previously Ionic’s Platform service was used to determine the current device in the browser, but since it’s not SSR-compatible, the user agent string is now used instead. On the server, the user agent is read from the request headers, and in the browser from the `Window.navigator` object. The app mode is now correctly set for most devices and browsers. One notable exception is Safari on iPads with iOS 13+, which are recognized as desktop devices. Using only the user agent string, it is not possible to distinguish Safari on iPads with iOS 13+ from Safari on MacBooks with MacOS. This fix makes the app compatible with Angular hydration, and nullifies the unreleased changes in [a2f3ea2](https://github.com/slsfi/digital-edition-frontend-ng/commit/a2f3ea276497d410d744a3a88486d0fa57188f66). ([7a9efed](https://github.com/slsfi/digital-edition-frontend-ng/commit/7a9efed0680a2718d91055da9b9efe4be438fa99))
+
+### Removed
+
+- Deps: `xliff`. ([7475e83](https://github.com/slsfi/digital-edition-frontend-ng/commit/7475e832b944e6059a4f7b062ca3fe6af98dcd73))
+
+
+
+## [1.2.3] – 2024-01-26
+
+### Fixed
+
+- Broken server-side rendering for non-default locales. Before this commit pages in non-default locales that used the `UrlService` were not rendered on the server. This was a side effect of the [`@jsonurl/jsonurl`](https://github.com/jsonurl/jsonurl-js) library used by the service to convert primitive data types and complex data structures like arrays, arrays of objects and objects with nested arrays and objects into URL-safe strings and vice versa. This fix removes the dependency on the external library and replaces its functionality with a custom conversion implementation. The custom implementation is not a full implementation of the [JSON→URL specification](https://github.com/jsonurl/specification/), but produces the same results for the parts that are relevant for this project. The code has been generated by ChatGPT-4 according to the JSON→URL specification, meticulously guided by a human mind. ([e4ff558](https://github.com/slsfi/digital-edition-frontend-ng/commit/e4ff5581b82efa2438a5eb3a03ce787bbfa0473b))
+
+
+
+## [1.2.2] – 2024-01-25
+
+### Changed
+
+- Fix indentation in [`nginx.conf`](/nginx.conf). ([779b217](https://github.com/slsfi/digital-edition-frontend-ng/commit/779b21778e35591aa43cdddabf0f9682c9df40e7))
+- Use `ARG` instructions in [`Dockerfile`](/Dockerfile) to define variables for setting Angular major version and Node image tag of the base image. This makes updating `Dockerfile` clearer as the Angular major version has to be changed in the file when the Angular major version of the app is updated. ([700b4e5](https://github.com/slsfi/digital-edition-frontend-ng/commit/700b4e53e574e937b36e8bd0b76546c798f7d5ab))
+- Refactor functions and services related to markdown content. Remove duplicate code by moving functions for getting markdown content to the markdown service. Add pipe for marking HTML safe (bypassing sanitization) in order to separate the getting and parsing of markdown to HTML from the trusting of the HTML. Rename MarkdownContentService MarkdownService. ([a294791](https://github.com/slsfi/digital-edition-frontend-ng/commit/a294791f2946ec66d5b32557ba2f7d8ae030fe98))
+- Replace `bypassSecurityTrustHtml` function calls with `trustHtml` pipe. ([b698c67](https://github.com/slsfi/digital-edition-frontend-ng/commit/b698c677f40dba5d073688e7d30e524e101bc63f))
+- Run MathJax only in the browser. ([d92853c](https://github.com/slsfi/digital-edition-frontend-ng/commit/d92853c15435c07d40ed79ea1a2ef9cf9f98eb6e))
+- Deps: update Angular to 17.1.1. ([3aba10e](https://github.com/slsfi/digital-edition-frontend-ng/commit/3aba10e41213d7e18a1af120f1ecd63eec2a4fda), [a3783f2](https://github.com/slsfi/digital-edition-frontend-ng/commit/a3783f2d6b4f6f30ef14b6766a22d524b8e60dd8))
+- Deps: update Ionic to 7.6.6. ([1baa779](https://github.com/slsfi/digital-edition-frontend-ng/commit/1baa779dd2e4853d78513dffb2de4a19a5be5d44))
+- Deps: update htmlparser2 to 9.1.0. ([3a28300](https://github.com/slsfi/digital-edition-frontend-ng/commit/3a28300a9b2594e1b3a8da3a92d1e8cb547292c2))
+- Deps: update marked to 11.1.1 and remove @types/marked. Move markdown parsing to function in dedicated markdown service. ([2d214df](https://github.com/slsfi/digital-edition-frontend-ng/commit/2d214df0a76c5fd5d82e760b02ecbf9a9823b141))
+- Deps: update zone.js to 0.14.3. ([9a33558](https://github.com/slsfi/digital-edition-frontend-ng/commit/9a335581bd6edaa84437b56b90866c440f9af714))
+- Moved @angular/compiler from devDependencies to dependencies (like in fresh Angular 17 apps). ([c8a680d](https://github.com/slsfi/digital-edition-frontend-ng/commit/c8a680da970c5f27f76088186fe9555f0dcf98a5))
+- Deps: update typescript to 5.3.3. ([c2ef241](https://github.com/slsfi/digital-edition-frontend-ng/commit/c2ef241c96610f915b201f272de5be07735852d9))
+- Deps: update @types/node to 20.11.5. ([ba5a0ea](https://github.com/slsfi/digital-edition-frontend-ng/commit/ba5a0ea2a69721e7ece6d54b3bd803a153247200))
+- Deps: update browser-sync to 3.0.2. ([7f65bed](https://github.com/slsfi/digital-edition-frontend-ng/commit/7f65bed1369ca517ce108ee6bf4e3ba7948b4c00))
+- Deps: update jasmine-core to 5.1.1 and @types/jasmine to 5.1.4. ([b548e78](https://github.com/slsfi/digital-edition-frontend-ng/commit/b548e789674599298a79076136a5d98d404ed774))
+
+### Removed
+
+- Deps: angular-eslint from devDependencies. ([c719b45](https://github.com/slsfi/digital-edition-frontend-ng/commit/c719b45b41c93379f9819ad7d01e267c572ab52c))
+- Deps: jasmine-spec-reporter from devDependencies. ([a9e0702](https://github.com/slsfi/digital-edition-frontend-ng/commit/a9e070215e15adb5f1078b688ab7bd347d316270))
+- Deps: karma-coverage-istanbul-reporter from devDependencies. ([f27d677](https://github.com/slsfi/digital-edition-frontend-ng/commit/f27d6770d2623acea2f07067952edec0529976cd))
+- Deps: ts-node from devDependencies. ([e55173f](https://github.com/slsfi/digital-edition-frontend-ng/commit/e55173f496db494fcd369b414efa1adf5353beb9))
+
+
+
 ## [1.2.1] – 2024-01-16
 
 ### Added
@@ -69,8 +151,8 @@ siteLogoDimensions: {
 ### Changed
 
 - Default site logo in top menu changed to optimized PNG image file. Added both black and white versions of SLS’s logo to `assets/images/logo/`. ([9df4bef](https://github.com/slsfi/digital-edition-frontend-ng/commit/9df4bef940ddd66c6087daa93bee9fd166b4e731))
-- Update Angular dev-kit, CLI and SSR to 17.0.9. ([c67b22e](https://github.com/slsfi/digital-edition-frontend-ng/commit/c67b22e89fd459b850c523d679f1653ea5e2eaeb))
-- Update dev-dependency follow-redirects to 1.15.4. ([30355ea](https://github.com/slsfi/digital-edition-frontend-ng/commit/30355ea87e03c68c31df87ed34bb85cadd9e1f35))
+- Deps: update Angular dev-kit, CLI and SSR to 17.0.9. ([c67b22e](https://github.com/slsfi/digital-edition-frontend-ng/commit/c67b22e89fd459b850c523d679f1653ea5e2eaeb))
+- Deps: update dev-dependency follow-redirects to 1.15.4. ([30355ea](https://github.com/slsfi/digital-edition-frontend-ng/commit/30355ea87e03c68c31df87ed34bb85cadd9e1f35))
 
 
 
@@ -83,7 +165,7 @@ siteLogoDimensions: {
 ### Changed
 
 - Paths to font files in @font-face rules from absolute to relative. ([2dd2bf3](https://github.com/slsfi/digital-edition-frontend-ng/commit/2dd2bf34d76233f5eafc15e607a491a7800e1a38))
-- Update Ionic to 7.6.3 and Ionicons to 7.2.2. ([f35d148](https://github.com/slsfi/digital-edition-frontend-ng/commit/f35d14831bec9aa7430c43a4bd7854c3f77871b9))
+- Deps: update Ionic to 7.6.3 and Ionicons to 7.2.2. ([f35d148](https://github.com/slsfi/digital-edition-frontend-ng/commit/f35d14831bec9aa7430c43a4bd7854c3f77871b9))
 
 
 
@@ -97,9 +179,9 @@ siteLogoDimensions: {
 
 ### Changed
 
-- Update Angular to 17.0.8. ([e936d0b](https://github.com/slsfi/digital-edition-frontend-ng/commit/e936d0b097877cca2d61ff93ddee53b14583672b))
-- Update ng-extract-i18n-merge to 2.9.1. ([98e567b](https://github.com/slsfi/digital-edition-frontend-ng/commit/98e567b691d0e7c2550e2bbe5bc6015859e4798f))
 - Eagerly load home page banner image in portrait mode. ([5d11e3c](https://github.com/slsfi/digital-edition-frontend-ng/commit/5d11e3cce6b57335e8c6ae8816f5bd38aefa414f))
+- Deps: update Angular to 17.0.8. ([e936d0b](https://github.com/slsfi/digital-edition-frontend-ng/commit/e936d0b097877cca2d61ff93ddee53b14583672b))
+- Deps: update ng-extract-i18n-merge to 2.9.1. ([98e567b](https://github.com/slsfi/digital-edition-frontend-ng/commit/98e567b691d0e7c2550e2bbe5bc6015859e4798f))
 
 ### Fixed
 
@@ -119,9 +201,9 @@ siteLogoDimensions: {
 
 ### Changed
 
-- Update Angular to 17.0.7. ([90028cf](https://github.com/slsfi/digital-edition-frontend-ng/commit/90028cfae667383603fd8852412ec7448ec6da5a))
 - Update base app Docker image repository and tag in `compose.yml`. ([8bdfc5a](https://github.com/slsfi/digital-edition-frontend-ng/commit/8bdfc5a04b5e138ce12fafb69c7e90730dad73f9))
 - Update README, CHANGELOG and build workflow code comments. ([35d373d](https://github.com/slsfi/digital-edition-frontend-ng/commit/35d373d67254638574483eae01f7a8a6415bba68))
+- Deps: update Angular to 17.0.7. ([90028cf](https://github.com/slsfi/digital-edition-frontend-ng/commit/90028cfae667383603fd8852412ec7448ec6da5a))
 
 ### Fixed
 
@@ -151,11 +233,11 @@ siteLogoDimensions: {
 
 ### Changed
 
-- Update Ionic to 7.6.0. ([9c66917](https://github.com/slsfi/digital-edition-frontend-ng/commit/9c66917e8df33e96c5ac115aae618c6bce453c4a))
-- Update Angular to 17.0.6. ([bf878ae](https://github.com/slsfi/digital-edition-frontend-ng/commit/bf878aeeeb7a6100b81f4e1e808e7913806ec5b8))
 - Apply background colors to toggle labels only instead of the entire toggles in the view options popover. ([fc2fc38](https://github.com/slsfi/digital-edition-frontend-ng/commit/fc2fc38c64d3c4d66c2838769f9cac74f0a72a08))
 - Adjust padding of facsimile page number input elements to accommodate changed spec in Ionic 7.6.0. ([34d1ab0](https://github.com/slsfi/digital-edition-frontend-ng/commit/34d1ab074e03d386f01e6fe00e1fe5e0409dcfb5))
 - Move inline styles for checkbox labels on the elastic-search page to the component SCSS-file. ([8d0a766](https://github.com/slsfi/digital-edition-frontend-ng/commit/8d0a76692396c77715fa570ac32e8f19bfd6b41a))
+- Deps: update Ionic to 7.6.0. ([9c66917](https://github.com/slsfi/digital-edition-frontend-ng/commit/9c66917e8df33e96c5ac115aae618c6bce453c4a))
+- Deps: update Angular to 17.0.6. ([bf878ae](https://github.com/slsfi/digital-edition-frontend-ng/commit/bf878aeeeb7a6100b81f4e1e808e7913806ec5b8))
 
 
 
@@ -165,7 +247,11 @@ siteLogoDimensions: {
 
 
 
-[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.2.1...HEAD
+[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.3.1...HEAD
+[1.3.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.3.0...1.3.1
+[1.3.0]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.2.3...1.3.0
+[1.2.3]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.2.2...1.2.3
+[1.2.2]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.2.1...1.2.2
 [1.2.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.2.0...1.2.1
 [1.2.0]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.1.1...1.2.0
 [1.1.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.1.0...1.1.1

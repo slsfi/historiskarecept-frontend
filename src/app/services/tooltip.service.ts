@@ -1,5 +1,4 @@
-import { Injectable, SecurityContext } from '@angular/core';
-import { DomSanitizer } from '@angular/platform-browser';
+import { Injectable } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
 
 import { config } from '@config';
@@ -25,8 +24,7 @@ export class TooltipService {
   constructor(
     private commentService: CommentService,
     private namedEntityService: NamedEntityService,
-    private platformService: PlatformService,
-    private sanitizer: DomSanitizer
+    private platformService: PlatformService
   ) {
     this.simpleWorkMetadata = config.modal?.namedEntity?.useSimpleWorkMetadata ?? false;
   }
@@ -104,7 +102,7 @@ export class TooltipService {
     return this.commentService.getSingleComment(textItemID, elementID).pipe(
       map((comment: any) => {
         this.cachedTooltips.comments.size > this.maxTooltipCacheSize && this.cachedTooltips.comments.clear();
-        this.platformService.isDesktop() && this.cachedTooltips.comments.set(elementID, comment);
+        !this.platformService.isMobile() && this.cachedTooltips.comments.set(elementID, comment);
         return (
           { name: 'Comment', description: comment } ||
           { name: 'Error', description: '' }
@@ -113,7 +111,7 @@ export class TooltipService {
     );
   }
 
-  getFootnoteTooltip(id: string, textType: string, triggerElem: HTMLElement): Observable<any> {
+  getFootnoteTooltip(id: string, textType: string, triggerElem: HTMLElement): Observable<string> {
     const cachedTooltip = this.cachedTooltips.footnotes.has(textType + '_' + id)
       ? this.cachedTooltips.footnotes.get(textType + '_' + id) : '';
 
@@ -154,7 +152,7 @@ export class TooltipService {
       ttText = ttText.replaceAll(' xmlns:tei="http://www.tei-c.org/ns/1.0"', '');
 
       let columnId = '';
-      if (this.platformService.isDesktop()) {
+      if (!this.platformService.isMobile()) {
         // Get column id of the column where the footnote is.
         let containerElem = triggerElem.parentElement;
         while (
@@ -169,17 +167,14 @@ export class TooltipService {
       }
 
       // Prepend the footnoteindicator to the the footnote text.
-      const footnoteWithIndicator: string = '<div class="footnoteWrapper">'
+      const footnoteHTML: string = '<div class="footnoteWrapper">'
         + '<a class="xreference footnoteReference'
         + (textTypeClass ? ' ' + textTypeClass : '')
         + (columnId ? ' targetColumnId_' + columnId : '')
         + '" href="#' + id + '">' + triggerElem.textContent
         + '</a>' + '<p class="footnoteText">' + ttText  + '</p></div>';
-      const footnoteHTML: string | null = this.sanitizer.sanitize(
-        SecurityContext.HTML, this.sanitizer.bypassSecurityTrustHtml(footnoteWithIndicator)
-      );
       this.cachedTooltips.footnotes.size > this.maxTooltipCacheSize && this.cachedTooltips.footnotes.clear();
-      this.platformService.isDesktop() && this.cachedTooltips.footnotes.set(textType + '_' + id, footnoteHTML);
+      !this.platformService.isMobile() && this.cachedTooltips.footnotes.set(textType + '_' + id, footnoteHTML);
       return of(footnoteHTML || '');
     } else {
       return of('');

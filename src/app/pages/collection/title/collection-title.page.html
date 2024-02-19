@@ -1,7 +1,7 @@
 <ion-header class="ion-no-border">
   <ion-toolbar class="secondary">
 
-    <text-changer slot="start" *ngIf="!mobileMode" [textItemID]="collectionID" [parentPageType]="'page-title'" class="text-changer-desktop-mode"></text-changer>
+    <text-changer slot="start" *ngIf="!mobileMode" [textItemID]="collectionID" [parentPageType]="'title'" class="text-changer-desktop-mode"></text-changer>
 
     <ion-buttons slot="end" class="secondary-toolbar-buttons-wrapper">
       <ion-button *ngIf="showURNButton" (click)="showReference()">
@@ -30,7 +30,7 @@
           [class.teiContainer]="!loadContentFromMarkdown"
           [class.markdown]="loadContentFromMarkdown"
           [class.md_content]="loadContentFromMarkdown"
-          [innerHTML]="text"
+          [innerHTML]="text | trustHtml"
     ></div>
     <ng-template #loading>
       <ion-spinner class="loading" name="crescent"></ion-spinner>
@@ -38,4 +38,4 @@
   </article>
 </ion-content>
 
-<text-changer *ngIf="mobileMode" [textItemID]="collectionID" [parentPageType]="'page-title'" class="text-changer-mobile-mode"></text-changer>
+<text-changer *ngIf="mobileMode" [textItemID]="collectionID" [parentPageType]="'title'" class="text-changer-mobile-mode"></text-changer>
