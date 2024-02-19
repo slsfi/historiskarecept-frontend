@@ -1,11 +1,9 @@
 import { Component, Inject, LOCALE_ID, OnInit } from '@angular/core';
-import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
 import { Router } from '@angular/router';
-import { catchError, map, Observable, of } from 'rxjs';
-import { marked } from 'marked';
+import { Observable } from 'rxjs';
 
 import { config } from '@config';
-import { MarkdownContentService } from '@services/markdown-content.service';
+import { MarkdownService } from '@services/markdown.service';
 
 
 @Component({
@@ -14,13 +12,16 @@ import { MarkdownContentService } from '@services/markdown-content.service';
   styleUrls: ['./home.page.scss'],
 })
 export class HomePage implements OnInit {
-  descriptionText$: Observable<SafeHtml>;
-  footerText$: Observable<SafeHtml>;
+  descriptionText$: Observable<string | null>;
+  footerText$: Observable<string | null>;
   imageAltText: string = '';
   imageOnRight: boolean = false;
   imageOrientationPortrait: boolean = false;
+  imageSources: any[] = [];
   imageURL: string = '';
   imageURLStyle: string = '';
+  imageHeight: number | null = null;
+  imageWidth: number | null = null;
   portraitImageObjectPosition: string | null = null;
   searchQuery: string = '';
   showContentGrid: boolean = false;
@@ -30,9 +31,8 @@ export class HomePage implements OnInit {
   titleOnImage: boolean = false;
 
   constructor(
-    private mdContentService: MarkdownContentService,
+    private mdService: MarkdownService,
     private router: Router,
-    private sanitizer: DomSanitizer,
     @Inject(LOCALE_ID) private activeLocale: string
   ) {
     this.imageAltText = config.page?.home?.bannerImage?.altTexts?.[this.activeLocale] ?? 'image';
@@ -44,6 +44,9 @@ export class HomePage implements OnInit {
     this.showFooter = config.page?.home?.showFooter ?? false;
     this.showSearchbar = config.page?.home?.showSearchbar ?? false;
     this.titleOnImage = config.page?.home?.portraitOrientationSettings?.siteTitleOnImageOnSmallScreens ?? false;
+    this.imageHeight = config.page?.home?.bannerImage?.intrinsicSize?.height ?? null;
+    this.imageWidth = config.page?.home?.bannerImage?.intrinsicSize?.width ?? null;
+    this.imageSources = config.page?.home?.bannerImage?.alternateSources ?? [];
 
     if (config.page?.home?.portraitOrientationSettings?.imagePlacement?.squareCroppedVerticalOffset) {
       this.portraitImageObjectPosition = '50% ' + config.page?.home?.portraitOrientationSettings?.imagePlacement?.squareCroppedVerticalOffset;
@@ -58,31 +61,21 @@ export class HomePage implements OnInit {
   }
 
   ngOnInit() {
-    this.descriptionText$ = this.getMdContent(this.activeLocale + '-01');
-    if (this.showFooter) {
-      this.footerText$ = this.getMdContent(this.activeLocale + '-06');
-    }
-  }
-
-  private getMdContent(fileID: string): Observable<SafeHtml> {
-    return this.mdContentService.getMdContent(fileID).pipe(
-      map((res: any) => {
-        return this.sanitizer.bypassSecurityTrustHtml(marked(res.content));
-      }),
-      catchError((e) => {
-        console.error(e);
-        return of('');
-      })
+    this.descriptionText$ = this.mdService.getParsedMdContent(
+      this.activeLocale + '-01'
     );
+    if (this.showFooter) {
+      this.footerText$ = this.mdService.getParsedMdContent(
+        this.activeLocale + '-06'
+      );
+    }
   }
 
   submitSearchQuery() {
     if (this.searchQuery) {
       this.router.navigate(
         ['/search'],
-        {
-          queryParams: { query: this.searchQuery }
-        }
+        { queryParams: { query: this.searchQuery } }
       );
     }
   }

@@ -21,6 +21,13 @@ export const config: Config = {
           URL: "assets/images/open-graph/historiska-recept-stilleben-Katja-Hagelstam.jpg"
         }
       }
+    },
+    prebuild: {
+      sitemap: true,
+      staticCollectionMenus: true
+    },
+    ssr: {
+      collectionSideMenu: false
     }
   },
   collections: {
@@ -103,7 +110,12 @@ export const config: Config = {
         altTexts: {
           sv: "Fotografi av ett fat med råa grönsaker och en hel fisk med en kniv instucken vertikalt. Bakom tallriken finns en guldramad målning av en äldre man framför ett fat med fisk. Allt är arrangerat på ett träbord framför en mörk bakgrund. Foto: Katja Hagelstam."
         },
+        intrinsicSize: {
+          height: null,
+          width: null
+        },
         orientationPortrait: true,
+        alternateSources: [],
         URL: "assets/images/home-page-banner-portrait.jpg"
       },
       portraitOrientationSettings: {
