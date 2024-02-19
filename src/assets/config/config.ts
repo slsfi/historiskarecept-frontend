@@ -111,11 +111,22 @@ export const config: Config = {
           sv: "Fotografi av ett fat med råa grönsaker och en hel fisk med en kniv instucken vertikalt. Bakom tallriken finns en guldramad målning av en äldre man framför ett fat med fisk. Allt är arrangerat på ett träbord framför en mörk bakgrund. Foto: Katja Hagelstam."
         },
         intrinsicSize: {
-          height: null,
-          width: null
+          height: 1304,
+          width: 1056
         },
         orientationPortrait: true,
-        alternateSources: [],
+        alternateSources: [
+          {
+            srcset: "assets/images/home-page-banner-portrait_396w.avif 396w, assets/images/home-page-banner-portrait_528w.avif 528w, assets/images/home-page-banner-portrait_704w.avif 704w, assets/images/home-page-banner-portrait_900w.avif 900w, assets/images/home-page-banner-portrait.avif 1056w",
+            sizes: "(max-width: 900px) 100vw, 27.5vw",
+            type: "image/avif"
+          },
+          {
+            srcset: "assets/images/home-page-banner-portrait_396w.jpg 396w, assets/images/home-page-banner-portrait_528w.jpg 528w, assets/images/home-page-banner-portrait_704w.jpg 704w, assets/images/home-page-banner-portrait_900w.jpg 900w, assets/images/home-page-banner-portrait.jpg 1056w",
+            sizes: "(max-width: 900px) 100vw, 27.5vw",
+            type: "image/jpeg"
+          }
+        ],
         URL: "assets/images/home-page-banner-portrait.jpg"
       },
       portraitOrientationSettings: {
