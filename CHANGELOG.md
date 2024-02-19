@@ -8,13 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+## Added
 
-
-## [1.2.1-granska.1] – 2024-01-16
-
-### Changed
-
-- Merge upstream, original repository [`v1.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.1) into `granska` branch. ([603458c](https://github.com/slsfi/historiskarecept-frontend/commit/603458c1d46d57cc4810419a74f33d0d8a4e187c))
+- Alternate image sources for the home page banner image.
 
 
 
@@ -97,6 +93,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps: jasmine-spec-reporter from devDependencies. ([a9e0702](https://github.com/slsfi/digital-edition-frontend-ng/commit/a9e070215e15adb5f1078b688ab7bd347d316270))
 - Deps: karma-coverage-istanbul-reporter from devDependencies. ([f27d677](https://github.com/slsfi/digital-edition-frontend-ng/commit/f27d6770d2623acea2f07067952edec0529976cd))
 - Deps: ts-node from devDependencies. ([e55173f](https://github.com/slsfi/digital-edition-frontend-ng/commit/e55173f496db494fcd369b414efa1adf5353beb9))
+
+
+
+## [1.2.1-granska.1] – 2024-01-16
+
+### Changed
+
+- Merge upstream, original repository [`v1.2.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.2.1) into `granska` branch. ([603458c](https://github.com/slsfi/historiskarecept-frontend/commit/603458c1d46d57cc4810419a74f33d0d8a4e187c))
 
 
 
