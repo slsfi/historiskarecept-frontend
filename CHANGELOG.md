@@ -8,9 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.3.2-production.1] – 2024-03-01
+
 ### Added
 
-- Set crawl delay rule in robots.txt.
+- Crawl delay rule in `robots.txt`. ([c28d8ba](https://github.com/slsfi/historiskarecept-frontend/commit/c28d8ba9f4cf4998dc7084d60b3f2bce8c9ecb04))
+
+### Changed
+
+- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `production` branch. ([211c80c](https://github.com/slsfi/historiskarecept-frontend/commit/211c80c07bf6d761ebb6b88cd542362febc5eb1e))
 
 
 
@@ -297,6 +305,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.1-production.1...1.3.2-production.1
 [1.3.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.1-production.1...1.3.1-production.1
 [1.2.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.0-production.1...1.2.1-production.1
 [1.2.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/releases/tag/1.2.0-production.1
