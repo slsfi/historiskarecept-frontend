@@ -10,15 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.3.1-granska.1] – 2024-02-19
-
-### Added
-
-- Alternate image sources for the home page banner image. ([bf89527](https://github.com/slsfi/historiskarecept-frontend/commit/bf89527ad019465137b9935b65d26d76a9db7f2f))
+## [1.3.2-granska.1] – 2024-03-01
 
 ### Changed
 
-- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `granska` branch. ([e18b159](https://github.com/slsfi/historiskarecept-frontend/commit/e18b1594efb39b54446280d517c53bb8eebb0af1))
+- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `granska` branch. ([7d34773](https://github.com/slsfi/historiskarecept-frontend/commit/7d34773aee6c65fbddee6ea5d1b775f0c79f9586))
 
 
 
@@ -37,6 +33,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Missing collection menu when navigating backward using browser history if collection changes. ([11687bb](https://github.com/slsfi/digital-edition-frontend-ng/commit/11687bbf6d4859685550b75de7df3857fab963c1))
+
+
+
+## [1.3.1-granska.1] – 2024-02-19
+
+### Added
+
+- Alternate image sources for the home page banner image. ([bf89527](https://github.com/slsfi/historiskarecept-frontend/commit/bf89527ad019465137b9935b65d26d76a9db7f2f))
+
+### Changed
+
+- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `granska` branch. ([e18b159](https://github.com/slsfi/historiskarecept-frontend/commit/e18b1594efb39b54446280d517c53bb8eebb0af1))
 
 
 
@@ -304,6 +312,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.1-granska.1...1.3.2-granska.1
 [1.3.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.1-granska.1...1.3.1-granska.1
 [1.2.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.0-granska.1...1.2.1-granska.1
 [1.2.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.1.0-granska.1...1.2.0-granska.1
