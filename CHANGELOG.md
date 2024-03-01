@@ -8,18 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-
-
-## [1.3.1-production.1] – 2024-02-19
-
 ### Added
 
-- Alternate image sources for the home page banner image. ([41fa891](https://github.com/slsfi/historiskarecept-frontend/commit/41fa8911c3e58ad2b79a1f4113819ef11ce7b1fb))
-- Sitemap path to robots.txt. ([bcd85fa](https://github.com/slsfi/historiskarecept-frontend/commit/bcd85fa232089afdd3b2ccde7bc41e6c3cd37536))
-
-### Changed
-
-- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `production` branch. ([e364730](https://github.com/slsfi/historiskarecept-frontend/commit/e3647306cbe217204d8e03c4d6bfbc5fdfb5a349))
+- Set crawl delay rule in robots.txt.
 
 
 
@@ -38,6 +29,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Missing collection menu when navigating backward using browser history if collection changes. ([11687bb](https://github.com/slsfi/digital-edition-frontend-ng/commit/11687bbf6d4859685550b75de7df3857fab963c1))
+
+
+
+## [1.3.1-production.1] – 2024-02-19
+
+### Added
+
+- Alternate image sources for the home page banner image. ([41fa891](https://github.com/slsfi/historiskarecept-frontend/commit/41fa8911c3e58ad2b79a1f4113819ef11ce7b1fb))
+- Sitemap path to robots.txt. ([bcd85fa](https://github.com/slsfi/historiskarecept-frontend/commit/bcd85fa232089afdd3b2ccde7bc41e6c3cd37536))
+
+### Changed
+
+- Merge release [`v1.3.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.1) from upstream, original repository into `production` branch. ([e364730](https://github.com/slsfi/historiskarecept-frontend/commit/e3647306cbe217204d8e03c4d6bfbc5fdfb5a349))
 
 
 
