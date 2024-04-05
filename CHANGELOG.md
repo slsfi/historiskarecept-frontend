@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.3.2-granska.1] – 2024-03-01
+## [1.3.3-granska.1] – 2024-04-05
 
 ### Changed
 
-- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `granska` branch. ([7d34773](https://github.com/slsfi/historiskarecept-frontend/commit/7d34773aee6c65fbddee6ea5d1b775f0c79f9586))
+- Merge release [`v1.3.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.3) from upstream, original repository into `granska` branch. ([63cf1d3](https://github.com/slsfi/historiskarecept-frontend/commit/63cf1d3921e1cdc56bdd5a7e9701b12abbd35a5d))
 
 
 
@@ -46,6 +46,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Link-elements added to the DOM using a custom renderer in the document head service are cleaned up when the service is destroyed. This fixes a potential memory leak in the SSR-app. ([736195e](https://github.com/slsfi/digital-edition-frontend-ng/commit/736195e4e6097c24a6452ad5294ad29ea6e90293))
 - Return values of the RxJS `catchError` function. ([fb862c2](https://github.com/slsfi/digital-edition-frontend-ng/commit/fb862c2e801a9f232d3fc92d704e9bebc5bd632b))
 - Ensure cleanup of event listeners in the draggable-image directive. ([0b2f871](https://github.com/slsfi/digital-edition-frontend-ng/commit/0b2f871a737ec2daec91a08e3021289782f9dd41))
+
+
+
+## [1.3.2-granska.1] – 2024-03-01
+
+### Changed
+
+- Merge release [`v1.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.2) from upstream, original repository into `granska` branch. ([7d34773](https://github.com/slsfi/historiskarecept-frontend/commit/7d34773aee6c65fbddee6ea5d1b775f0c79f9586))
 
 
 
@@ -344,6 +352,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.2-granska.1...1.3.3-granska.1
 [1.3.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.1-granska.1...1.3.2-granska.1
 [1.3.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.1-granska.1...1.3.1-granska.1
 [1.2.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.0-granska.1...1.2.1-granska.1
