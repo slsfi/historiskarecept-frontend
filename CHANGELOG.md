@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.3.3-production.1] – 2024-04-05
+## [1.3.4-production.1] – 2024-05-07
 
 ### Changed
 
-- Merge release [`v1.3.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.3) from upstream, original repository into `production` branch. ([9c2d35d](https://github.com/slsfi/historiskarecept-frontend/commit/9c2d35de05febee046fbe0c89a5e8bf4ad696bc8))
+- Merge release [`v1.3.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.4) from upstream, original repository into `production` branch. ([69cda78](https://github.com/slsfi/historiskarecept-frontend/commit/69cda78a4e232cacfbbfd0f850aee3638c0376d1))
 
 
 
@@ -31,6 +31,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps: update `@types/node` to 20.12.10. ([524024e](https://github.com/slsfi/digital-edition-frontend-ng/commit/524024e1c3848e76a81da157d5f4a512aae93f3b), [0508562](https://github.com/slsfi/digital-edition-frontend-ng/commit/0508562d47188e0d77115323d9c1bb7c926298b3))
 - Deps: update `typescript` to 5.4.5. ([4a8c95f](https://github.com/slsfi/digital-edition-frontend-ng/commit/4a8c95fd55f8ca549e1a13096052daf9d57d6caf))
 - Update `nginx` to 1.26.0. ([4e3bdfa](https://github.com/slsfi/digital-edition-frontend-ng/commit/4e3bdfabaee74d63bcde720d60f823e9d8f1000f))
+
+
+
+## [1.3.3-production.1] – 2024-04-05
+
+### Changed
+
+- Merge release [`v1.3.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.3) from upstream, original repository into `production` branch. ([9c2d35d](https://github.com/slsfi/historiskarecept-frontend/commit/9c2d35de05febee046fbe0c89a5e8bf4ad696bc8))
 
 
 
@@ -362,6 +370,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.3.4-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.3-production.1...1.3.4-production.1
 [1.3.3-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.2-production.1...1.3.3-production.1
 [1.3.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.1-production.1...1.3.2-production.1
 [1.3.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.2.1-production.1...1.3.1-production.1
