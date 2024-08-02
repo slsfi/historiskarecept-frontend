@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.3.4-granska.1] – 2024-05-07
+## [1.4.3-granska.1] – 2024-08-02
 
 ### Changed
 
-- Merge release [`v1.3.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.4) from upstream, original repository into `granska` branch. ([f77089a](https://github.com/slsfi/historiskarecept-frontend/commit/f77089a3fa14b09d2c9dc35c5e5f595322da403e))
+- Merge release [`v1.4.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.4) from upstream, original repository into `granska` branch. ([1fc4943](https://github.com/slsfi/historiskarecept-frontend/commit/1fc49430a0f2eeeb3dae7860658e39fc8c908acd))
 
 
 
@@ -84,6 +84,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps (dev): update `ng-extract-i18n-merge` to 2.12.0. ([62aa573](https://github.com/slsfi/digital-edition-frontend-ng/commit/62aa5731705c5355fdd8870f90038e9a18ff35f2))
 - Update transitive dependencies by recreating `package-lock.json`. ([2f6f6d6](https://github.com/slsfi/digital-edition-frontend-ng/commit/2f6f6d6dda8b93b00599b7631cae734eb4b63ee1))
 - Update `nginx` to 1.26.1. ([3fe3dd9](https://github.com/slsfi/digital-edition-frontend-ng/commit/3fe3dd9df4e230fe5fc5fd901b4e37812b64f038))
+
+
+
+## [1.3.4-granska.1] – 2024-05-07
+
+### Changed
+
+- Merge release [`v1.3.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.3.4) from upstream, original repository into `granska` branch. ([f77089a](https://github.com/slsfi/historiskarecept-frontend/commit/f77089a3fa14b09d2c9dc35c5e5f595322da403e))
 
 
 
@@ -450,6 +458,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.4.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.4-granska.1...1.4.3-granska.1
 [1.3.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.3-granska.1...1.3.4-granska.1
 [1.3.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.2-granska.1...1.3.3-granska.1
 [1.3.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.1-granska.1...1.3.2-granska.1
