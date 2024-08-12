@@ -241,120 +241,149 @@ page-home {
   }
 }
 
-page-about .map-legend {
+page-about {
+  .map-legend {
+    column-gap: 1.5em;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    column-gap: 1.5em;
     margin: 2em 0 2em 4.5em;
-}
-@media screen and (max-width: 550px) {
-    page-about .map-legend {
-        margin: 2em 0;
+
+    h2 {
+      font-size: 1.0em;
+      font-weight: bold;
     }
-}
-page-about .map-legend-column {
-	width: 100%;
+
+    p {
+      margin: 0;
+    }
+
+    ol {
+      list-style: none;
+      margin-top: 0;
+      padding-left: 1.25em;
+    }
+
+    li {
+      padding-bottom: 0.25em;
+    }
+  }
+
+  @media screen and (max-width: 550px) {
+    .map-legend {
+      margin: 2em 0;
+    }
+  }
+
+  .map-legend-column {
     max-width: 320px;
-}
-page-about .map-legend h2 {
-	font-size: 1.0em;
-    font-weight: bold;
-}
-page-about .map-legend p {
-	margin: 0;
-}
-page-about .map-legend ol {
-    list-style: none;
-    margin-top: 0;
-    padding-left: 1.25em;
-}
-page-about .map-legend li {
-	padding-bottom: 0.25em;
-}
-page-about figure.no-margins-image {
+    width: 100%;
+  }
+
+  figure.no-margins-image {
     margin: 0;
-}
-page-about ul li {
+  }
+
+  ul li {
     padding-bottom: 0.35em;
-}
-page-about table.website-change-log {
+  }
+
+  table.website-change-log {
     margin-top: 2em;
-}
-page-about table.website-change-log th,
-page-about table.website-change-log td {
-    text-align: left;
-    padding: 0.25em 1.5em 0.25em 0;
-}
-page-about table.website-change-log th {
-    border-bottom: 1px solid #222;
-}
-page-about table.website-change-log td {
-    border-bottom: 1px solid #cecece;
-}
-page-about table.website-change-log tr:last-child td {
-    border-bottom: 0;
+
+    th,
+    td {
+      text-align: left;
+      padding: 0.25em 1.5em 0.25em 0;
+    }
+
+    th {
+      border-bottom: 1px solid #222;
+    }
+
+    td {
+      border-bottom: 1px solid #cecece;
+    }
+
+    tr:last-child td {
+      border-bottom: 0;
+    }
+  }
 }
 
 /* Kolumnen med måttenheter */
-text-legend div.tei.legend-markdown-content h3,
-text-legend div.tei.legend-markdown-content h4 {
-	margin: 1.5em 0 0.5em 0;
-}
-text-legend div.tei.legend-markdown-content p.noIndent + h3 {
+text-legend div.tei.legend-markdown-content {
+  h3,
+  h4 {
+    margin: 1.5em 0 0.5em 0;
+  }
+
+  p.noIndent + h3 {
     margin-top: 1em;
-}
-text-legend div.tei.legend-markdown-content h3 + h4 {
+  }
+
+  h3 + h4 {
     margin-top: 0.55em;
-}
-text-legend div.tei.legend-markdown-content h4 {
+  }
+
+  h4 {
     font-size: 1.0588em;
-}
-text-legend div.tei.legend-markdown-content table {
-	margin: 0 0 1em 0;
+  }
+
+  table {
+    margin: 0 0 1em 0;
+  }
 }
 
 /* Sökinstruktionerna i avancerade sökningen */
-page-elastic-search .info.markdown details {
-    padding: .5em .5em 0;
+page-elastic-search {
+  .info.markdown {
+    details {
+      padding: .5em .5em 0;
+
+      ul li {
+        line-height: 1.5;
+      }
+
+      ul li + li {
+        padding-top: 0.75em;
+      }
+    }
+
+    summary {
+      text-decoration: none !important;
+      font-weight: bold;
+      margin: -.5em -.5em 0;
+      padding: .5em;
+    }
+
+    details[open] {
+      border-bottom: 1px solid #aaa;
+      padding: .5em;
+
+      summary {
+        border-bottom: 1px solid #aaa;
+        margin-bottom: .5em;
+      }
+    }
+
+    .query_example {
+      background-color: #fdfdfd;
+      padding: 0.125em 0.25em;
+      color: var(--button-background-color);
+      font-size: 0.889em;
+      font-family: monospace;
+      border-radius: 3px;
+      border: 1px solid var(--button-background-color);
+    }
+  }
 }
 
-page-elastic-search .info.markdown summary {
-    text-decoration: none !important;
-    font-weight: bold;
-    margin: -.5em -.5em 0;
-    padding: .5em;
+/* Cookiebanner */
+a.cky-banner-element {
+  cursor: pointer;
+  text-decoration: underline;
 }
-
-page-elastic-search .info.markdown details[open] {
-    border-bottom: 1px solid #aaa;
-    padding: .5em;
-}
-
-page-elastic-search .info.markdown details[open] summary {
-    border-bottom: 1px solid #aaa;
-    margin-bottom: .5em;
-}
-
-page-elastic-search .info.markdown details ul li {
-    line-height: 1.5;
-}
-
-page-elastic-search .info.markdown details ul li + li {
-    padding-top: 0.75em;
-}
-
-page-elastic-search .info.markdown .query_example {
-    background-color: #fdfdfd;
-    padding: 0.125em 0.25em;
-    color: var(--button-background-color);
-    font-size: 0.889em;
-    font-family: monospace;
-    border-radius: 3px;
-    border: 1px solid var(--button-background-color);
-}
-
-/* Cookiebannern */
 #cky-consent,
 #cky-settings-popup {
 	font-family: var(--font-stack-app-base);

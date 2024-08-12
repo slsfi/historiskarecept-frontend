@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Refactor styles coding in `custom.scss`.
+
 
 
 ## [1.4.3-production.1] – 2024-08-02
