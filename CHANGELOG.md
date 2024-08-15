@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.4.4-granska.2] – 2024-08-15
+
 ### Changed
 
-- Add published collections to config.
-- Enable search in internally published collections.
+- Add published collections to config. ([55db34f](https://github.com/slsfi/historiskarecept-frontend/commit/55db34f4503292b81f0b4b00d37fc3172f142cd1))
+- Enable search in internally published collections. ([168cd45](https://github.com/slsfi/historiskarecept-frontend/commit/168cd45289a51eb3cb5de0e34446b314bd1d68b5))
 
 
 
@@ -497,6 +501,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.4.4-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.1...1.4.4-granska.2
 [1.4.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.3-granska.1...1.4.4-granska.1
 [1.4.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.4-granska.1...1.4.3-granska.1
 [1.3.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.3-granska.1...1.3.4-granska.1
