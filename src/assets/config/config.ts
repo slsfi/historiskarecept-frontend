@@ -86,7 +86,7 @@ export const config: Config = {
         },
         {
           terms: {
-            published: ["2"]
+            published: ["1", "2"]
           }
         }
       ],

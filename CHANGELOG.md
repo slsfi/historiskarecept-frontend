@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Add published collections to config.
+- Enable search in internally published collections.
 
 
 
