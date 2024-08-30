@@ -10,20 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.4.4-granska.2] – 2024-08-15
+## [1.5.2-granska.1] – 2024-08-30
 
 ### Changed
 
-- Add published collections to config. ([55db34f](https://github.com/slsfi/historiskarecept-frontend/commit/55db34f4503292b81f0b4b00d37fc3172f142cd1))
-- Enable search in internally published collections. ([168cd45](https://github.com/slsfi/historiskarecept-frontend/commit/168cd45289a51eb3cb5de0e34446b314bd1d68b5))
-
-
-
-## [1.4.4-granska.1] – 2024-08-12
-
-### Changed
-
-- Merge release [`v1.4.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.4) from upstream, original repository into `granska` branch. ([a73f425](https://github.com/slsfi/historiskarecept-frontend/commit/a73f425c38db891c151eb4f979ac561fe1fa49a9))
+- Merge release [`v1.5.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.2) from upstream, original repository into `granska` branch. ([7a1587f](https://github.com/slsfi/historiskarecept-frontend/commit/7a1587ffa53fde442a8a67ee9a48b907d5cd9388))
 
 
 
@@ -86,6 +77,23 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 - `index.html`: deprecated and outdated meta tags. ([2bf9c2e](https://github.com/slsfi/digital-edition-frontend-ng/commit/2bf9c2ee1061eda3c8be9d285d9c216a7a26ba49))
 - `compose.yml`: testa-vonwright.sls.fi from extra hosts. ([5bb6ff8](https://github.com/slsfi/digital-edition-frontend-ng/commit/5bb6ff836fc58fe1aa5545226e1816b44ebe88e8))
+
+
+
+## [1.4.4-granska.2] – 2024-08-15
+
+### Changed
+
+- Add published collections to config. ([55db34f](https://github.com/slsfi/historiskarecept-frontend/commit/55db34f4503292b81f0b4b00d37fc3172f142cd1))
+- Enable search in internally published collections. ([168cd45](https://github.com/slsfi/historiskarecept-frontend/commit/168cd45289a51eb3cb5de0e34446b314bd1d68b5))
+
+
+
+## [1.4.4-granska.1] – 2024-08-12
+
+### Changed
+
+- Merge release [`v1.4.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.4.4) from upstream, original repository into `granska` branch. ([a73f425](https://github.com/slsfi/historiskarecept-frontend/commit/a73f425c38db891c151eb4f979ac561fe1fa49a9))
 
 
 
@@ -566,6 +574,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.2...1.5.2-granska.1
 [1.4.4-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.1...1.4.4-granska.2
 [1.4.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.3-granska.1...1.4.4-granska.1
 [1.4.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.3.4-granska.1...1.4.3-granska.1
