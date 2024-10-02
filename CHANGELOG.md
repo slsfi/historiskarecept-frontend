@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.2-granska.2] – 2024-10-02
+
 ### Changed
 
-- Add Runeberg collection to config.
+- Add Runeberg collection to config. ([e1ff7fc](https://github.com/slsfi/historiskarecept-frontend/commit/e1ff7fc4e2525e7d7713a97d0cb4048ff00207a2))
 
 
 
@@ -578,6 +582,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.2-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.1...1.5.2-granska.2
 [1.5.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.2...1.5.2-granska.1
 [1.4.4-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.1...1.4.4-granska.2
 [1.4.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.3-granska.1...1.4.4-granska.1
