@@ -10,19 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.5.2-granska.2] – 2024-10-02
+## [1.5.3-granska.1] – 2024-10-08
 
 ### Changed
 
-- Add Runeberg collection to config. ([e1ff7fc](https://github.com/slsfi/historiskarecept-frontend/commit/e1ff7fc4e2525e7d7713a97d0cb4048ff00207a2))
-
-
-
-## [1.5.2-granska.1] – 2024-08-30
-
-### Changed
-
-- Merge release [`v1.5.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.2) from upstream, original repository into `granska` branch. ([7a1587f](https://github.com/slsfi/historiskarecept-frontend/commit/7a1587ffa53fde442a8a67ee9a48b907d5cd9388))
+- Merge release [`v1.5.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.3) from upstream, original repository into `granska` branch. ([449e82a](https://github.com/slsfi/historiskarecept-frontend/commit/449e82a3ad5eb53e08cf9643e12d60e76a5d76d3))
 
 
 
@@ -36,6 +28,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps (dev): update `@types/node` to 20.16.9. ([1ec69f7](https://github.com/slsfi/digital-edition-frontend-ng/commit/1ec69f7261474461b673d54fc6ea3f7b7c2f3ae4))
 - Deps (dev): update `jasmine-core` to 5.3.0. ([7d72e39](https://github.com/slsfi/digital-edition-frontend-ng/commit/7d72e39287ed5a3af06f87eecf8e76069c49826d))
 - Deps (transitive): update `browser-sync` to 3.0.3 and `serve-static` to 1.16.2. ([04a421d](https://github.com/slsfi/digital-edition-frontend-ng/commit/04a421dad2ac9239921712bed85ac988b68f9bf1))
+
+
+
+## [1.5.2-granska.2] – 2024-10-02
+
+### Changed
+
+- Add Runeberg collection to config. ([e1ff7fc](https://github.com/slsfi/historiskarecept-frontend/commit/e1ff7fc4e2525e7d7713a97d0cb4048ff00207a2))
+
+
+
+## [1.5.2-granska.1] – 2024-08-30
+
+### Changed
+
+- Merge release [`v1.5.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.2) from upstream, original repository into `granska` branch. ([7a1587f](https://github.com/slsfi/historiskarecept-frontend/commit/7a1587ffa53fde442a8a67ee9a48b907d5cd9388))
 
 
 
@@ -596,6 +604,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.2...1.5.3-granska.1
 [1.5.2-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.1...1.5.2-granska.2
 [1.5.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.2...1.5.2-granska.1
 [1.4.4-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.1...1.4.4-granska.2
