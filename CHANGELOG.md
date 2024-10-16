@@ -8,9 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.3-granska.2] – 2024-10-16
+
 ### Changed
 
-- Add Lagus collection to config.
+- Add Lagus collection to config. ([6c55b9d](https://github.com/slsfi/historiskarecept-frontend/commit/6c55b9df32beece8625d9f3d1354ed2091dcab82))
+
 
 
 ## [1.5.3-granska.1] – 2024-10-08
@@ -607,6 +612,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.3-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.1...1.5.3-granska.2
 [1.5.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.2...1.5.3-granska.1
 [1.5.2-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.1...1.5.2-granska.2
 [1.5.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-granska.2...1.5.2-granska.1
