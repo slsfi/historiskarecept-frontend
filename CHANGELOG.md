@@ -8,6 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Add Lagus collection to config.
 
 
 ## [1.5.3-granska.1] – 2024-10-08
