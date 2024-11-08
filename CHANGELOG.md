@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Add Peters collection to config and set collection groups.
+
 
 
 ## [1.5.3-granska.2] – 2024-10-16
