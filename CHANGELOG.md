@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.3-granska.3] – 2024-11-08
+
 ### Changed
 
-- Add Peters collection to config and set collection groups.
+- Add Peters collection to config and set collection groups. ([16b8efb](https://github.com/slsfi/historiskarecept-frontend/commit/16b8efbc1e4cefe525e6a155df95f23bbe4f14a0))
 
 
 
@@ -616,6 +620,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.3-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.2...1.5.3-granska.3
 [1.5.3-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.1...1.5.3-granska.2
 [1.5.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.2...1.5.3-granska.1
 [1.5.2-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.1...1.5.2-granska.2
