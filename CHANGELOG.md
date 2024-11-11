@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.4-granska.2] – 2024-11-11
+
 ### Added
 
-- Thumbnails of new collection cover images.
+- Thumbnails of new collection cover images. ([8df1dd6](https://github.com/slsfi/historiskarecept-frontend/commit/8df1dd6a8fc9d3a0fcaf2574760aad8c5f44b8a9))
 
 
 
@@ -654,6 +658,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.4-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.4-granska.1...1.5.4-granska.2
 [1.5.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.3...1.5.4-granska.1
 [1.5.3-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.2...1.5.3-granska.3
 [1.5.3-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.1...1.5.3-granska.2
