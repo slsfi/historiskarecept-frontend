@@ -8,6 +8,25 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Reorder collections.
+
+
+
+## [1.5.4] – 2024-11-11
+
+### Changed
+
+- Deps: update `@angular` to 18.2.11. ([7d3b184](https://github.com/slsfi/digital-edition-frontend-ng/commit/7d3b1844ad671edd5bc61d6d9fd2cd1bb483909f))
+- Deps: update `express` to 4.21.1. ([c02930e](https://github.com/slsfi/digital-edition-frontend-ng/commit/c02930eb4e00e101851aca817c3a10331f1b0b07))
+- Deps: update `marked` to 15.0.0. ([2979390](https://github.com/slsfi/digital-edition-frontend-ng/commit/297939095e3471800b3901ee0b79e461cb3bac30))
+- Deps: update `tslib` to 2.8.1. ([92f7631](https://github.com/slsfi/digital-edition-frontend-ng/commit/92f76318e7efee24b816deaf8528a97501dfea59))
+- Deps: pin `@ionic` to 8.2.2. ([5275d39](https://github.com/slsfi/digital-edition-frontend-ng/commit/5275d397aa62dc4a8a6919846125aa0f2cacdcff))
+- Deps (dev): update `@types/node` to 20.17.6. ([2685ec8](https://github.com/slsfi/digital-edition-frontend-ng/commit/2685ec862679bf1915c201f58adef6f6ca6e33c9))
+- Deps (dev): update `jasmine-core` to 5.4.0. ([82b4437](https://github.com/slsfi/digital-edition-frontend-ng/commit/82b4437892cd96a89d5ce6ce46dcf7a96c37396f))
+- Deps (transitive): update multiple by recreating `package-lock.json`. ([d3557a6](https://github.com/slsfi/digital-edition-frontend-ng/commit/d3557a688de7c8960a232d2c01246767f9e39b30), [bfa02a1](https://github.com/slsfi/digital-edition-frontend-ng/commit/bfa02a1c6af527fd17fbc721c3fdd93bcbee7151))
+
 
 
 ## [1.5.3-granska.3] – 2024-11-08
@@ -31,21 +50,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Merge release [`v1.5.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.3) from upstream, original repository into `granska` branch. ([449e82a](https://github.com/slsfi/historiskarecept-frontend/commit/449e82a3ad5eb53e08cf9643e12d60e76a5d76d3))
-
-
-
-## [1.5.4] – 2024-11-11
-
-### Changed
-
-- Deps: update `@angular` to 18.2.11. ([7d3b184](https://github.com/slsfi/digital-edition-frontend-ng/commit/7d3b1844ad671edd5bc61d6d9fd2cd1bb483909f))
-- Deps: update `express` to 4.21.1. ([c02930e](https://github.com/slsfi/digital-edition-frontend-ng/commit/c02930eb4e00e101851aca817c3a10331f1b0b07))
-- Deps: update `marked` to 15.0.0. ([2979390](https://github.com/slsfi/digital-edition-frontend-ng/commit/297939095e3471800b3901ee0b79e461cb3bac30))
-- Deps: update `tslib` to 2.8.1. ([92f7631](https://github.com/slsfi/digital-edition-frontend-ng/commit/92f76318e7efee24b816deaf8528a97501dfea59))
-- Deps: pin `@ionic` to 8.2.2. ([5275d39](https://github.com/slsfi/digital-edition-frontend-ng/commit/5275d397aa62dc4a8a6919846125aa0f2cacdcff))
-- Deps (dev): update `@types/node` to 20.17.6. ([2685ec8](https://github.com/slsfi/digital-edition-frontend-ng/commit/2685ec862679bf1915c201f58adef6f6ca6e33c9))
-- Deps (dev): update `jasmine-core` to 5.4.0. ([82b4437](https://github.com/slsfi/digital-edition-frontend-ng/commit/82b4437892cd96a89d5ce6ce46dcf7a96c37396f))
-- Deps (transitive): update multiple by recreating `package-lock.json`. ([d3557a6](https://github.com/slsfi/digital-edition-frontend-ng/commit/d3557a688de7c8960a232d2c01246767f9e39b30), [bfa02a1](https://github.com/slsfi/digital-edition-frontend-ng/commit/bfa02a1c6af527fd17fbc721c3fdd93bcbee7151))
 
 
 
