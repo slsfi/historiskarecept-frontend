@@ -8,14 +8,19 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.4-granska.1] – 2024-11-11
+
 ### Added
 
-- Cover images for new collections.
+- Cover images for new collections. ([a245d92](https://github.com/slsfi/historiskarecept-frontend/commit/a245d92140d4d506af325ae10aad08eaac86606b))
 
 ### Changed
 
-- Reorder collections.
-- Adjust table and text-unit styles.
+- Reorder collections. ([a8c8cba](https://github.com/slsfi/historiskarecept-frontend/commit/a8c8cbaf6eef213fc63700310ffd2c70116ec4bc))
+- Adjust table and text-unit styles. ([4051012](https://github.com/slsfi/historiskarecept-frontend/commit/4051012222fb0ee395af8fb397513d41b0647a1d))
+- Merge release [`v1.5.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.4) from upstream, original repository into `granska` branch. ([f58cea2](https://github.com/slsfi/historiskarecept-frontend/commit/f58cea268c2fe8f7c796c75d4845b1e46a8f3b66))
 
 
 
@@ -645,6 +650,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.3...1.5.4-granska.1
 [1.5.3-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.2...1.5.3-granska.3
 [1.5.3-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-granska.1...1.5.3-granska.2
 [1.5.3-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-granska.2...1.5.3-granska.1
