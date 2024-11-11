@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Added
+
+- Thumbnails of new collection cover images.
+
 
 
 ## [1.5.4-granska.1] – 2024-11-11
