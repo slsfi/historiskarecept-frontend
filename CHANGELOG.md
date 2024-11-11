@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Reorder collections.
+- Adjust table and text-unit styles.
 
 
 
