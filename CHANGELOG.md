@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Added
 
+- New collections to config.
 - Thumbnails of new collection cover images.
 
 

@@ -43,7 +43,12 @@ export const config: Config = {
     },
     highlightSearchMatches: true,
     order: [
-      [541, 2560, 1088, 812, 1089, 1367]
+      [
+        2560, 2566, 1089, 1367, 2569,
+        2561, 812, 2568, 2567, 541,
+        1088
+      ],
+      [2570]
     ]
   },
   ebooks: [
