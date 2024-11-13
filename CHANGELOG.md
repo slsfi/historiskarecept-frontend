@@ -13,6 +13,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - New collections to config.
 - Thumbnails of new collection cover images.
 
+### Changed
+
+- Adjust table and text-unit styles.
+
 
 
 ## [1.5.4] – 2024-11-11

@@ -311,6 +311,17 @@ page-about {
   }
 }
 
+/* Mindre avstånd mellan tabellrader */
+reading-text div.tei td,
+manuscripts div.tei td {
+  padding-bottom: 0.025em;
+  padding-top: 0.025em;
+}
+/* Avstånd mellan textblock som hör ihop */
+div.tei * + .text-unit {
+  margin-top: 3em;
+}
+
 /* Kolumnen med måttenheter */
 text-legend div.tei.legend-markdown-content {
   h3,
