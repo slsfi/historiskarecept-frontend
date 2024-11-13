@@ -15,7 +15,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Changed
 
-- Adjust table and text-unit styles.
+- Table and text-unit styles.
+- Collection group name.
+
 
 
 
