@@ -8,16 +8,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.4-production.1] – 2024-11-13
+
 ### Added
 
-- New collections to config.
-- Thumbnails of new collection cover images.
+- New collections to config. ([dc9524c](https://github.com/slsfi/historiskarecept-frontend/commit/dc9524cd4f5651cfe41f38863faca24c91f100a5))
+- New collection cover images. ([870dcba](https://github.com/slsfi/historiskarecept-frontend/commit/870dcbaa891b5bf5acc0426c8e39f1b7bf89d194))
 
 ### Changed
 
-- Table and text-unit styles.
-- Collection group name.
-
+- Table and text-unit styles. ([f1d027a](https://github.com/slsfi/historiskarecept-frontend/commit/f1d027a923a7cd8301e990cb9aee63497925a919))
+- Collection group name. ([fd6c434](https://github.com/slsfi/historiskarecept-frontend/commit/fd6c434cb05ef29e26ed337bcbb089c9c30f0699))
+- Merge release [`v1.5.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.4) from upstream, original repository into `production` branch. ([fb54d48](https://github.com/slsfi/historiskarecept-frontend/commit/fb54d480d7fe8e92db1c7d3e054fde8781079cb2))
 
 
 
@@ -608,6 +612,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.4-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-production.1...1.5.4-production.1
 [1.5.3-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-production.1...1.5.3-production.1
 [1.5.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-production.1...1.5.2-production.1
 [1.4.4-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.3-production.1...1.4.4-production.1
