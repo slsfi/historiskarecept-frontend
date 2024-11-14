@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Name of recipe collection group in main menu.
+
 
 
 ## [1.5.4-production.1] – 2024-11-13

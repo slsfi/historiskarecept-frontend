@@ -933,7 +933,7 @@
     <unit id="MainSideMenu.CollectionsGroup1">
       <segment state="initial">
         <source>Innehåll</source>
-        <target>Receptsamlingarna</target>
+        <target>Receptsamlingar</target>
       </segment>
     </unit>
     <unit id="MainSideMenu.CollectionsGroup2">
