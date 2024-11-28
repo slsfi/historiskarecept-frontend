@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Name of recipe collection group in main menu.
+- Enable filters in index of keywords.
 
 
 

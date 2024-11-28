@@ -148,7 +148,7 @@ export const config: Config = {
     index: {
       keywords: {
         maxFetchSize: 500,
-        showFilter: false,
+        showFilter: true,
         publishedStatus: 2
       }
     },
