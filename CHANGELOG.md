@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Enable filters in index of keywords.
+
 
 
 ## [1.5.4-granska.2] – 2024-11-11
