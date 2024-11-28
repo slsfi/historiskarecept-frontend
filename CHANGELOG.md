@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.4-production.2] – 2024-11-28
+
 ### Changed
 
-- Name of recipe collection group in main menu.
-- Enable filters in index of keywords.
+- Name of recipe collection group in main menu. ([93ec37f](https://github.com/slsfi/historiskarecept-frontend/commit/93ec37f242e5d603a84d23e4e19b7a9e323dcdb4))
+- Enable filters in index of keywords. ([639ebcf](https://github.com/slsfi/historiskarecept-frontend/commit/639ebcf58983d3e2f57699793b28532a50329992))
 
 
 
@@ -617,6 +621,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.4-production.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.4-production.1...1.5.4-production.2
 [1.5.4-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.3-production.1...1.5.4-production.1
 [1.5.3-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.2-production.1...1.5.3-production.1
 [1.5.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.4.4-production.1...1.5.2-production.1
