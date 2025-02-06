@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Add Ingman and Sarvlax collections to config.
+
 
 
 ## [1.5.6-granska.1] – 2025-02-03
