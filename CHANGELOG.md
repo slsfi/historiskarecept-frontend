@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Add Malmgård collection to config.
+
 
 
 ## [1.5.6-granska.2] – 2025-02-06
