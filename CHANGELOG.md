@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.6-granska.3] – 2025-02-06
+
 ### Changed
 
-- Add Malmgård collection to config.
+- Add Malmgård collection to config. ([00faee1](https://github.com/slsfi/historiskarecept-frontend/commit/00faee19092d6b522f2d91d9d09c9b56171e2d78))
 
 
 
@@ -728,6 +732,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.6-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.2...1.5.6-granska.3
 [1.5.6-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.1...1.5.6-granska.2
 [1.5.6-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.5-granska.3...1.5.6-granska.1
 [1.5.5-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.4-granska.3...1.5.5-granska.1
