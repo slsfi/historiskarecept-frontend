@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.5.6-granska.4] – 2025-03-06
+
 ### Changed
 
-- Crop collection cover images to same dimensions.
+- Crop collection cover images to same dimensions. ([8763e20](https://github.com/slsfi/historiskarecept-frontend/commit/8763e205a6ed952f6108642f12ff88cfbcd7650f))
 
 
 
@@ -736,6 +740,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.6-granska.4]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.3...1.5.6-granska.4
 [1.5.6-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.2...1.5.6-granska.3
 [1.5.6-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.1...1.5.6-granska.2
 [1.5.6-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.5-granska.3...1.5.6-granska.1
