@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Crop collection cover images to same dimensions.
+
 
 
 ## [1.5.6-granska.3] – 2025-02-06
