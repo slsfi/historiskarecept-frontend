@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.5.6-production.1] – 2025-02-03
+## [1.5.7-production.1] – 2025-03-17
 
 ### Changed
 
-- Merge release [`v1.5.6`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.6) from upstream, original repository into `production` branch. ([85312fc](https://github.com/slsfi/historiskarecept-frontend/commit/85312fc1d40f40bbda8565fe2a0a9dd3a84fae1d))
+- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `production` branch. ([e17592f](https://github.com/slsfi/historiskarecept-frontend/commit/e17592fca1ddf712978c6eb2ae87ec4083f75cbc))
 
 
 
@@ -32,6 +32,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 - Deps (dev): update `jasmine-core` to 5.6.0. ([7701f8a](https://github.com/slsfi/digital-edition-frontend-ng/commit/7701f8a2d14e940dc9b1f45d3bad969378b237ea))
 - Deps (dev): update `ng-extract-i18n-merge` to 2.14.3. ([d144455](https://github.com/slsfi/digital-edition-frontend-ng/commit/d1444558eaaf7bfd425e6a007f9a4f6cf74f3e83))
 - Deps (dev): update `typescript` to 5.8.2. ([4c44ed8](https://github.com/slsfi/digital-edition-frontend-ng/commit/4c44ed813347a88619d7a6f2138d5611a7d6824a))
+
+
+
+## [1.5.6-production.1] – 2025-02-03
+
+### Changed
+
+- Merge release [`v1.5.6`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.6) from upstream, original repository into `production` branch. ([85312fc](https://github.com/slsfi/historiskarecept-frontend/commit/85312fc1d40f40bbda8565fe2a0a9dd3a84fae1d))
 
 
 
@@ -689,6 +697,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.7-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-production.1...1.5.7-production.1
 [1.5.6-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.5-production.2...1.5.6-production.1
 [1.5.5-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.4-production.2...1.5.5-production.1
 [1.5.4-production.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.4-production.1...1.5.4-production.2
