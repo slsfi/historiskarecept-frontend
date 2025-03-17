@@ -10,6 +10,31 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
+## [1.5.7-granska.1] – 2025-03-17
+
+### Changed
+
+- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `granska` branch. ([3eae8e9](https://github.com/slsfi/historiskarecept-frontend/commit/3eae8e9fbd0281aaad4625fd79bdf1305f344517))
+
+
+
+## [1.5.7] – 2025-03-17
+
+### Changed
+
+- Update `nginx` to 1.26.3. ([7b2416c](https://github.com/slsfi/digital-edition-frontend-ng/commit/7b2416cd36bb97f92ea2d89065451fb3d5c3e258))
+- Deps: update `@angular` to 19.2.x. ([59707a5](https://github.com/slsfi/digital-edition-frontend-ng/commit/59707a5099d426c5895b0aa8064e90c213509fab))
+- Deps: update `htmlparser2` to 10.0.0. ([64a0e06](https://github.com/slsfi/digital-edition-frontend-ng/commit/64a0e0611ee71dbfcae3cd4c6fb15c2746ab0012))
+- Deps: update `marked` to 15.0.7. ([37489dd](https://github.com/slsfi/digital-edition-frontend-ng/commit/37489dd40c9735684aaad3d7d293c082ab7299d4))
+- Deps: update `rxjs` to 7.8.2. ([a481646](https://github.com/slsfi/digital-edition-frontend-ng/commit/a481646ad4ce3b26a51e7e2c3ac665950c1cc6d7))
+- Deps (dev): update `@types/jasmine` to 5.1.7. ([a9db52c](https://github.com/slsfi/digital-edition-frontend-ng/commit/a9db52c3fe558399d61de9cde145118fc2d32f4d))
+- Deps (dev): update `@types/node` to 20.17.24. ([afc67aa](https://github.com/slsfi/digital-edition-frontend-ng/commit/afc67aa75250323c3a3355ca2f49cef421fe05b0))
+- Deps (dev): update `jasmine-core` to 5.6.0. ([7701f8a](https://github.com/slsfi/digital-edition-frontend-ng/commit/7701f8a2d14e940dc9b1f45d3bad969378b237ea))
+- Deps (dev): update `ng-extract-i18n-merge` to 2.14.3. ([d144455](https://github.com/slsfi/digital-edition-frontend-ng/commit/d1444558eaaf7bfd425e6a007f9a4f6cf74f3e83))
+- Deps (dev): update `typescript` to 5.8.2. ([4c44ed8](https://github.com/slsfi/digital-edition-frontend-ng/commit/4c44ed813347a88619d7a6f2138d5611a7d6824a))
+
+
+
 ## [1.5.6-granska.4] – 2025-03-06
 
 ### Changed
@@ -39,23 +64,6 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Merge release [`v1.5.6`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.6) from upstream, original repository into `granska` branch. ([2631b5c](https://github.com/slsfi/historiskarecept-frontend/commit/2631b5cc44e4d124a748686f62a3fdfade3fb1b8))
-
-
-
-## [1.5.7] – 2025-03-17
-
-### Changed
-
-- Update `nginx` to 1.26.3. ([7b2416c](https://github.com/slsfi/digital-edition-frontend-ng/commit/7b2416cd36bb97f92ea2d89065451fb3d5c3e258))
-- Deps: update `@angular` to 19.2.x. ([59707a5](https://github.com/slsfi/digital-edition-frontend-ng/commit/59707a5099d426c5895b0aa8064e90c213509fab))
-- Deps: update `htmlparser2` to 10.0.0. ([64a0e06](https://github.com/slsfi/digital-edition-frontend-ng/commit/64a0e0611ee71dbfcae3cd4c6fb15c2746ab0012))
-- Deps: update `marked` to 15.0.7. ([37489dd](https://github.com/slsfi/digital-edition-frontend-ng/commit/37489dd40c9735684aaad3d7d293c082ab7299d4))
-- Deps: update `rxjs` to 7.8.2. ([a481646](https://github.com/slsfi/digital-edition-frontend-ng/commit/a481646ad4ce3b26a51e7e2c3ac665950c1cc6d7))
-- Deps (dev): update `@types/jasmine` to 5.1.7. ([a9db52c](https://github.com/slsfi/digital-edition-frontend-ng/commit/a9db52c3fe558399d61de9cde145118fc2d32f4d))
-- Deps (dev): update `@types/node` to 20.17.24. ([afc67aa](https://github.com/slsfi/digital-edition-frontend-ng/commit/afc67aa75250323c3a3355ca2f49cef421fe05b0))
-- Deps (dev): update `jasmine-core` to 5.6.0. ([7701f8a](https://github.com/slsfi/digital-edition-frontend-ng/commit/7701f8a2d14e940dc9b1f45d3bad969378b237ea))
-- Deps (dev): update `ng-extract-i18n-merge` to 2.14.3. ([d144455](https://github.com/slsfi/digital-edition-frontend-ng/commit/d1444558eaaf7bfd425e6a007f9a4f6cf74f3e83))
-- Deps (dev): update `typescript` to 5.8.2. ([4c44ed8](https://github.com/slsfi/digital-edition-frontend-ng/commit/4c44ed813347a88619d7a6f2138d5611a7d6824a))
 
 
 
@@ -758,6 +766,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.5.7-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.4...1.5.7-granska.1
 [1.5.6-granska.4]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.3...1.5.6-granska.4
 [1.5.6-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.2...1.5.6-granska.3
 [1.5.6-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.1...1.5.6-granska.2
