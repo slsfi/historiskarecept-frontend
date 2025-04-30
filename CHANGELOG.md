@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.5.7-granska.1] – 2025-03-17
+## [1.6.1-granska.1] – 2025-04-30
 
 ### Changed
 
-- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `granska` branch. ([3eae8e9](https://github.com/slsfi/historiskarecept-frontend/commit/3eae8e9fbd0281aaad4625fd79bdf1305f344517))
+- Merge release [`v1.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.1) from upstream, original repository into `granska` branch. ([e1dc5e2](https://github.com/slsfi/historiskarecept-frontend/commit/e1dc5e281a13315a213f40cfe6374cf22d16f8a0))
 
 
 
@@ -52,6 +52,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Prebuild-scripts: handle 404 responses from API. ([e37f6ad](https://github.com/slsfi/digital-edition-frontend-ng/commit/e37f6ad6f1d28993dda3f4eaced45efecb31ae33))
+
+
+
+## [1.5.7-granska.1] – 2025-03-17
+
+### Changed
+
+- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `granska` branch. ([3eae8e9](https://github.com/slsfi/historiskarecept-frontend/commit/3eae8e9fbd0281aaad4625fd79bdf1305f344517))
 
 
 
@@ -806,6 +814,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.6.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.7-granska.1...1.6.1-granska.1
 [1.5.7-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.4...1.5.7-granska.1
 [1.5.6-granska.4]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.3...1.5.6-granska.4
 [1.5.6-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-granska.2...1.5.6-granska.3
