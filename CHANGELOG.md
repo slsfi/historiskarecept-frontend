@@ -10,11 +10,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 
-## [1.5.7-production.1] – 2025-03-17
+## [1.6.1-production.1] – 2025-04-30
 
 ### Changed
 
-- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `production` branch. ([e17592f](https://github.com/slsfi/historiskarecept-frontend/commit/e17592fca1ddf712978c6eb2ae87ec4083f75cbc))
+- Merge release [`v1.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.1) from upstream, original repository into `production` branch. ([03d3d13](https://github.com/slsfi/historiskarecept-frontend/commit/03d3d1373bf5a8517b5c1b89229afd0fa26dfb20))
 
 
 
@@ -52,6 +52,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Prebuild-scripts: handle 404 responses from API. ([e37f6ad](https://github.com/slsfi/digital-edition-frontend-ng/commit/e37f6ad6f1d28993dda3f4eaced45efecb31ae33))
+
+
+
+## [1.5.7-production.1] – 2025-03-17
+
+### Changed
+
+- Merge release [`v1.5.7`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.5.7) from upstream, original repository into `production` branch. ([e17592f](https://github.com/slsfi/historiskarecept-frontend/commit/e17592fca1ddf712978c6eb2ae87ec4083f75cbc))
 
 
 
@@ -737,6 +745,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.6.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.7-production.1...1.6.1-production.1
 [1.5.7-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-production.1...1.5.7-production.1
 [1.5.6-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.5-production.2...1.5.6-production.1
 [1.5.5-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.4-production.2...1.5.5-production.1
