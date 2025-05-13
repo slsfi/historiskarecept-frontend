@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Correct disallow rules and add index-pages to disallowed in `robots.txt`.
+
 
 
 ## [1.6.1-production.1] – 2025-04-30
