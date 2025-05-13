@@ -8,17 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
-### Changed
-
-- Correct disallow rules and add index-pages to disallowed in `robots.txt`.
 
 
-
-## [1.6.1-production.1] – 2025-04-30
+## [1.6.3-production.1] – 2025-05-13
 
 ### Changed
 
-- Merge release [`v1.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.1) from upstream, original repository into `production` branch. ([03d3d13](https://github.com/slsfi/historiskarecept-frontend/commit/03d3d1373bf5a8517b5c1b89229afd0fa26dfb20))
+- Correct disallow rules and add index-pages to disallowed in `robots.txt`. ([602fb6a](https://github.com/slsfi/historiskarecept-frontend/commit/602fb6a534bac511f9d8b9dc2e899ba19e47530b))
+- Merge release [`v1.6.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.3) from upstream, original repository into `production` branch. ([5b44100](https://github.com/slsfi/historiskarecept-frontend/commit/5b4410022f209f2538625d3ac80935632949efcb), [69746d8](https://github.com/slsfi/historiskarecept-frontend/commit/69746d8087d63a60476ed402d4efe1d5100e0221))
 
 
 
@@ -54,6 +51,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Fixed
 
 - Occurrences accordion: guard against empty collection ToC, and ensure ToC subscription completes. ([f4f871f](https://github.com/slsfi/digital-edition-frontend-ng/commit/f4f871f0712853d6661e431a68bb1121b149f677))
+
+
+
+## [1.6.1-production.1] – 2025-04-30
+
+### Changed
+
+- Merge release [`v1.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.1) from upstream, original repository into `production` branch. ([03d3d13](https://github.com/slsfi/historiskarecept-frontend/commit/03d3d1373bf5a8517b5c1b89229afd0fa26dfb20))
 
 
 
@@ -786,6 +791,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.6.3-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.1-production.1...1.6.3-production.1
 [1.6.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.7-production.1...1.6.1-production.1
 [1.5.7-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-production.1...1.5.7-production.1
 [1.5.6-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.5-production.2...1.5.6-production.1
