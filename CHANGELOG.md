@@ -8,6 +8,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Update to base version [`1.6.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.4) from upstream, original repository.
+
+
+
+## [1.6.4] – 2025-05-14
+
+### Fixed
+
+- SSR of ebooks in pdf-format blocked. ([0cff40a](https://github.com/slsfi/digital-edition-frontend-ng/commit/0cff40af045b7d85d35147ad860232f6648c1930))
+
+### Changed
+
+- Deps (dev): update `@types/node` to 20.17.47. ([ed89e0c](https://github.com/slsfi/digital-edition-frontend-ng/commit/ed89e0c1667bd90e25accac677cd0700c8f77475))
+
 
 
 ## [1.6.3-production.1] – 2025-05-13
@@ -38,6 +54,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 
 ## [1.6.2] – 2025-05-05
+
+> [!NOTE]
+> This release, in spite of being a patch release, might introduce breaking changes for projects that have customized the Angular HTML templates, as it contains a migration to the new Angular control flow syntax.
 
 ### Changed
 
@@ -756,7 +775,8 @@ siteLogoDimensions: {
 
 
 
-[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.6.3...HEAD
+[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.6.4...HEAD
+[1.6.4]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.6.3...1.6.4
 [1.6.3]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.6.2...1.6.3
 [1.6.2]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.6.1...1.6.2
 [1.6.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/1.6.0...1.6.1
