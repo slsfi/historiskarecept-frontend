@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.6.4-production.1] – 2025-05-14
+
 ### Changed
 
-- Update to base version [`1.6.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.4) from upstream, original repository.
+- Update to base version [`1.6.4`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.6.4) from upstream, original repository. ([883fdf6](https://github.com/slsfi/historiskarecept-frontend/commit/883fdf6530a1e921ad9207935d3ca719122be286))
 
 
 
@@ -811,6 +815,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.6.4-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.3-production.1...1.6.4-production.1
 [1.6.3-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.1-production.1...1.6.3-production.1
 [1.6.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.7-production.1...1.6.1-production.1
 [1.5.7-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.5.6-production.1...1.5.7-production.1
