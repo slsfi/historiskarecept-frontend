@@ -41,6 +41,12 @@ export const config: Config = {
       foreword: false,
       introduction: true
     },
+    frontMatterPageDisabled: {
+      cover: [],
+      title: [],
+      foreword: [],
+      introduction: []
+    },
     highlightSearchMatches: true,
     order: [
       [
@@ -193,6 +199,16 @@ export const config: Config = {
         illustrations: false,
         legend: true,
         metadata: false
+      },
+      viewTypeDisabledCollections: {
+        readingtext: [],
+        comments: [],
+        facsimiles: [],
+        manuscripts: [],
+        variants: [],
+        illustrations: [],
+        legend: [],
+        metadata: []
       }
     }
   },
