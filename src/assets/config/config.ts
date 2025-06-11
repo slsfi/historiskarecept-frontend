@@ -50,8 +50,8 @@ export const config: Config = {
     highlightSearchMatches: true,
     order: [
       [
-        2560, 2566, 1089, 1367, 2569,
-        2561, 812, 2568, 2567, 541,
+        2560, 2573, 2566, 2563, 1089, 1367, 2569,
+        2564, 2561, 812, 2568, 2572, 2567, 541,
         1088
       ],
       [2570]
@@ -149,7 +149,7 @@ export const config: Config = {
       },
       showContentGrid: true,
       showFooter: true,
-      showSearchbar: false
+      showSearchbar: true
     },
     index: {
       keywords: {
