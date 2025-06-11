@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 - Update to base version [`1.7.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.7.0) from upstream, original repository.
 - Update config.
+- Update collection cover images.
 
 
 
