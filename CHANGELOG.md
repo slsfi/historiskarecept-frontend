@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [1.8.2-granska.1] – 2025-06-30
+
 ### Changed
 
-- Update to base version [`1.8.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.8.2) from upstream, original repository.
+- Update to base version [`1.8.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/1.8.2) from upstream, original repository. ([d406970](https://github.com/slsfi/historiskarecept-frontend/commit/d4069706f2a68f7b192a3711c82dfed2701bd655))
 
 
 
@@ -1086,6 +1090,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[1.8.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.7.0-granska.1...1.8.2-granska.1
 [1.7.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.5-granska.1...1.7.0-granska.1
 [1.6.5-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.4-granska.1...1.6.5-granska.1
 [1.6.4-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.3-granska.1...1.6.4-granska.1
