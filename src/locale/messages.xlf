@@ -16,6 +16,16 @@
         <source>Sidans innehåll kunde inte laddas.</source>
       </segment>
     </unit>
+    <unit id="Article.Contents">
+      <segment>
+        <source>Innehåll</source>
+      </segment>
+    </unit>
+    <unit id="Article.LoadingError">
+      <segment>
+        <source>Artikeln kunde inte laddas.</source>
+      </segment>
+    </unit>
     <unit id="BasicActions.Cancel">
       <segment>
         <source>Avbryt</source>
@@ -24,11 +34,6 @@
     <unit id="BasicActions.Close">
       <segment>
         <source>Stäng</source>
-      </segment>
-    </unit>
-    <unit id="BasicActions.DontShowAgain">
-      <segment>
-        <source>Visa inte igen</source>
       </segment>
     </unit>
     <unit id="BasicActions.Download">
@@ -556,26 +561,6 @@
         <source>Texttyp</source>
       </segment>
     </unit>
-    <unit id="Epub.Contents">
-      <segment>
-        <source>Innehåll</source>
-      </segment>
-    </unit>
-    <unit id="Epub.FileNotFound">
-      <segment>
-        <source>Texten kunde inte laddas. Epub-filen saknas.</source>
-      </segment>
-    </unit>
-    <unit id="Epub.NoticeHeader">
-      <segment>
-        <source>Anmärkning</source>
-      </segment>
-    </unit>
-    <unit id="Epub.NoticeMessage">
-      <segment>
-        <source>Det här är en e-bok i epubformat som visas på webbsidan med hjälp av ett inbyggt läsprogram. Läsprogrammet fungerar bäst om din webbläsare är Firefox. I Chrome, Edge och Safari fungerar inte e-böckers länkar i läsprogrammet. Vi rekommenderar därför att du använder Firefox, eller laddar ner e-boken och läser den med ett läsprogram på din apparat.</source>
-      </segment>
-    </unit>
     <unit id="Facsimiles.AltText">
       <segment>
         <source>Skannat faksimil</source>
@@ -844,6 +829,11 @@
     <unit id="MainSideMenu.MediaCollections">
       <segment>
         <source>Bildbank</source>
+      </segment>
+    </unit>
+    <unit id="MainSideMenu.Search">
+      <segment>
+        <source>Sök i utgåvan</source>
       </segment>
     </unit>
     <unit id="Manuscripts.ChangeManuscript">
@@ -1251,6 +1241,11 @@
         <source>Källhänvisning</source>
       </segment>
     </unit>
+    <unit id="Reference.ReferToArticle">
+      <segment>
+        <source>Hänvisa till denna artikel</source>
+      </segment>
+    </unit>
     <unit id="Reference.ReferToCollection">
       <segment>
         <source>Hänvisa till denna delutgåva</source>
@@ -1259,11 +1254,6 @@
     <unit id="Reference.ReferToEbook">
       <segment>
         <source>Hänvisa till denna text</source>
-      </segment>
-    </unit>
-    <unit id="Reference.ReferToEdition">
-      <segment>
-        <source>Hänvisa till denna webbutgåva</source>
       </segment>
     </unit>
     <unit id="Reference.ReferToForeword">
@@ -1324,16 +1314,6 @@
     <unit id="TopMenu.Content">
       <segment>
         <source>Innehåll</source>
-      </segment>
-    </unit>
-    <unit id="TopMenu.Home">
-      <segment>
-        <source>Hem</source>
-      </segment>
-    </unit>
-    <unit id="TopMenu.LogoAltText">
-      <segment>
-        <source>Logo</source>
       </segment>
     </unit>
     <unit id="TopMenu.Menu">

@@ -8,13 +8,14 @@ import { IonicModule } from '@ionic/angular';
 import { catchError, forkJoin, map, Observable, of } from 'rxjs';
 
 import { config } from '@config';
+import { Article } from '@models/article.model';
 import { ArrayIncludesPipe } from '@pipes/array-includes.pipe';
 import { ParentChildPagePathPipe } from '@pipes/parent-child-page-path.pipe';
 import { CollectionsService } from '@services/collections.service';
 import { DocumentHeadService } from '@services/document-head.service';
 import { MarkdownService } from '@services/markdown.service';
 import { MediaCollectionService } from '@services/media-collection.service';
-import { addOrRemoveValueInNewArray, sortArrayOfObjectsAlphabetically } from '@utility-functions';
+import { addOrRemoveValueInNewArray, sortArrayOfObjectsAlphabetically, splitFilename } from '@utility-functions';
 
 /**
  * * This component uses ChangeDetectionStrategy.OnPush so change detection has to
@@ -36,7 +37,6 @@ import { addOrRemoveValueInNewArray, sortArrayOfObjectsAlphabetically } from '@u
 export class MainSideMenuComponent implements OnInit, OnChanges {
   @Input() urlSegments: UrlSegment[] = [];
 
-  ebooksList: any[] = [];
   highlightedMenu: string = '';
   mainMenu: any[] = [];
   selectedMenu: string[] = [];
@@ -53,15 +53,7 @@ export class MainSideMenuComponent implements OnInit, OnChanges {
     private mdcontentService: MarkdownService,
     private mediaCollectionService: MediaCollectionService,
     @Inject(LOCALE_ID) private activeLocale: string
-  ) {
-    this.ebooksList = config.ebooks ?? [];
-
-    if (this.ebooksList) {
-      this.ebooksList.forEach((epub: any) => {
-        epub.id = epub.filename;
-      });
-    }
-  }
+  ) {}
 
   ngOnInit() {
     this.getMenuData().subscribe(
@@ -100,6 +92,8 @@ export class MainSideMenuComponent implements OnInit, OnChanges {
         for (let i = 0; i < res.length; i++) {
           if (res[i].menuData && res[i].menuData.length) {
             for (let x = 0; x < res[i].menuData.length; x++) {
+              // Add the menu type to the menu data
+              res[i].menuData[x].menuType = res[i].menuType;
               menu.push(res[i].menuData[x]);
             }
           }
@@ -118,18 +112,26 @@ export class MainSideMenuComponent implements OnInit, OnChanges {
    * config.
    */
   private getMenuItemsArray(): Observable<any>[] {
-    const enabledPages = config.component?.mainSideMenu?.items ?? {};
+    // Get enabled menu items from config, and prepend with the home
+    // menu item, which is forced to always be shown.
+    let enabledPages = {
+      home: true,
+      ...(config.component?.mainSideMenu?.items ?? {})
+    };
+    enabledPages.home = true;
 
     const menuItemGetters: Record<string, () => Observable<any>> = {
       home: () => this.getHomePageMenuItem(),
       about: () => this.getAboutPagesMenu(),
+      articles: () => this.getArticlePagesMenu(),
       ebooks: () => this.getEbookPagesMenu(),
       collections: () => this.getCollectionPagesMenu(),
       mediaCollections: () => this.getMediaCollectionPagesMenu(),
       indexKeywords: () => this.getIndexPageMenuItem('keywords'),
       indexPersons: () => this.getIndexPageMenuItem('persons'),
       indexPlaces: () => this.getIndexPageMenuItem('places'),
-      indexWorks: () => this.getIndexPageMenuItem('works')
+      indexWorks: () => this.getIndexPageMenuItem('works'),
+      search: () => this.getSearchPageMenuItem()
     };
 
     return Object.entries(enabledPages)
@@ -149,6 +151,7 @@ export class MainSideMenuComponent implements OnInit, OnChanges {
       map((res: any) => {
         res = [res];
         this.recursivelyAddParentPagePath(res, '/about');
+
         return { menuType: 'about', menuData: res };
       }),
       catchError((error: any) => {
@@ -158,17 +161,43 @@ export class MainSideMenuComponent implements OnInit, OnChanges {
     );
   }
 
+  private getArticlePagesMenu(): Observable<any> {
+    if (!config.articles?.length) {
+      return of({ menuType: 'article', menuData: [] });
+    }
+
+    return this.mdcontentService.getMenuTree(
+      this.activeLocale, '04'
+    ).pipe(
+      map((res: any) => {
+        res = [res];
+        if (config.component?.mainSideMenu?.ungroupArticles) {
+          res = res[0]?.children ?? [];
+        }
+        this.recursivelyAddParentPagePath(res, '/article');
+        this.recursivelyMapArticleData(res);
+
+        return { menuType: 'article', menuData: res };
+      }),
+      catchError((error: any) => {
+        console.error(error);
+        return of({ menuType: 'article', menuData: [] });
+      })
+    );
+  }
+
   private getEbookPagesMenu(): Observable<any> {
     let menuData: any[] = [];
-    if (this.ebooksList.length) {
-      this.ebooksList.forEach(epub => {
+    if (config.ebooks?.length) {
+      config.ebooks.forEach((ebook: any) => {
+        const filenameparts = splitFilename(ebook.filename);
         menuData.push({
-          id: epub.id,
-          title: epub.title,
-          parentPath: '/ebook'
+          id: filenameparts.name,
+          title: ebook.title,
+          parentPath: `/ebook/${filenameparts.extension}`
         });
       });
-      if (this.ebooksList.length > 1) {
+      if (menuData.length > 1) {
         menuData = [{
           title: $localize`:@@MainSideMenu.Ebooks:E-böcker`,
           children: menuData
@@ -254,6 +283,11 @@ export class MainSideMenuComponent implements OnInit, OnChanges {
     });
   }
 
+  private getSearchPageMenuItem(): Observable<any> {
+    const menuData: any[] = [{ id: '', title: $localize`:@@MainSideMenu.Search:Sök i utgåvan`, parentPath: '/search' }];
+    return of({ menuType: 'search', menuData });
+  }
+
   private groupCollections(collections: any) {
     if (config.collections?.order) {
       let collectionsList = config.collections.order.map(() => []);
@@ -304,16 +338,39 @@ export class MainSideMenuComponent implements OnInit, OnChanges {
   }
 
   /**
+   * Goes through every object in @param array, including nested objects declared
+   * as in 'children' properties, and adds a new property 'articleId'
+   * with the value of the id property, and replaces the id property with the mapped
+   * value of the article routeName from the config. Also replaces the 'title'
+   * property value with the mapped title from the config.
+   */
+  private recursivelyMapArticleData(array: any[]) {
+    for (let i = 0; i < array.length; i++) {
+      if (array[i]["type"] === "file") {
+        const origId = array[i]["id"];
+        const article: Article = config.articles?.find(
+          (article: Article) => (article.id === origId && article.language === this.activeLocale)
+        ) ?? null;
+        array[i]["id"] = article?.routeName ?? origId;
+        array[i]["title"] = article?.title ?? array[i]["title"];
+      } else {
+        if (array[i]["children"] && array[i]["children"].length) {
+          this.recursivelyMapArticleData(array[i]["children"]);
+        }
+      }
+    }
+  }
+
+  /**
    * Based on the current page's URL segments in this.urlSegments, finds the
    * corresponding menu item, sets it as highlighted, updates the html-title
    * and expands any collapsed parents in the menu tree.
    */
   private updateHighlightedMenuItem() {
-    let currentPath = this.urlSegments && this.urlSegments[0]?.path || '';
-    if (currentPath && this.urlSegments && this.urlSegments[1]?.path) {
-      currentPath += '/' + this.urlSegments[1]?.path;
-    }
-    currentPath = '/' + currentPath;
+    // Create a path string from all route segments, prefixed with a slash
+    // (e.g., '/ebook/pdf/title-of-the-ebook')
+    const currentPath = '/' + (this.urlSegments?.map(segment => segment.path).join('/') || '');
+
     const currentItemRoot = this.recursiveFindCurrentMenuItem(this.mainMenu, currentPath);
     if (!currentItemRoot) {
       this.highlightedMenu = '';

@@ -30,6 +30,22 @@ export const config: Config = {
       collectionSideMenu: false
     }
   },
+  articles: [
+    {
+      id: "04-01",
+      language: "sv",
+      routeName: "brod-och-bot",
+      title: "Bröd och bot. Hushållsböcker och receptsamlingar under det långa 1700-talet",
+      coverURL: "assets/images/covers/cover_norrback-brod-och-bot_epub.jpg",
+      enableTOC: true,
+      downloadOptions: [
+        {
+          url: "https://urn.fi/URN:ISBN:978-951-583-582-6",
+          label: ""
+        }
+      ]
+    }
+  ],
   collections: {
     addTEIClassNames: false,
     replaceImageAssetsPaths: false,
@@ -57,23 +73,14 @@ export const config: Config = {
       [2570]
     ]
   },
-  ebooks: [
-    {
-      title: "Om hushållsböcker och receptsamlingar under 1700-talet",
-      filename: "norrback-brod-och-bot.epub",
-      externalFileURL: "",
-      coverURL: "assets/images/covers/cover_norrback-brod-och-bot_epub.jpg",
-      downloadOptions: [
-        {
-          url: "https://urn.fi/URN:ISBN:978-951-583-582-6",
-          label: ""
-        }
-      ]
-    }
-  ],
+  ebooks: [],
   page: {
     about: {
       initialPageNode: "01"
+    },
+    article: {
+      showTextDownloadButton: true,
+      showURNButton: true
     },
     elasticSearch: {
       enableFilters: true,
@@ -218,14 +225,10 @@ export const config: Config = {
   },
   component: {
     contentGrid: {
-      includeEbooks: true,
+      includeArticles: true,
+      includeEbooks: false,
       includeMediaCollection: false,
       showTitles: true
-    },
-    epub: {
-      showTOCButton: true,
-      showURNButton: true,
-      showViewOptionsButton: true
     },
     facsimiles: {
       imageQuality: 4,
@@ -233,17 +236,19 @@ export const config: Config = {
     },
     mainSideMenu: {
       items: {
-        home: false,
         about: true,
-        ebooks: true,
+        articles: true,
+        ebooks: false,
         collections: true,
         mediaCollections: false,
         indexKeywords: true,
         indexPersons: false,
         indexPlaces: false,
-        indexWorks: false
+        indexWorks: false,
+        search: true
       },
-      defaultExpanded: false
+      defaultExpanded: false,
+      ungroupArticles: true
     },
     manuscripts: {
       showTitle: false,
@@ -254,22 +259,10 @@ export const config: Config = {
       showAboutButton: true,
       showContentButton: true,
       showElasticSearchButton: true,
-      showURNButton: false,
-      showLanguageButton: false,
-      showSiteLogo: true,
-      siteLogoDefaultImageURL: "assets/images/logo/SLS_logo_full_white_346x112.png",
-      siteLogoMobileImageURL: "assets/images/logo/SLS_logo_symbol_white_112x112.png",
-      siteLogoLinkURL: "https://www.sls.fi/",
-      siteLogoDimensions: {
-        default: {
-          height: 56,
-          width: 173
-        },
-        mobile: {
-          height: 56,
-          width: 56
-        }
-      }
+      showLanguageButton: true
+    },
+    variants: {
+      showOpenLegendButton: true
     }
   },
   modal: {
