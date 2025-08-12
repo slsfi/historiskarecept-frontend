@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.1.0-production.1] – 2025-08-12
+
 ### Changed
 
-- Update to base version [`2.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.1.0) from upstream, original repository.
-- Article ToC background color.
+- Update to base version [`2.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.1.0) from upstream, original repository. ([f38daee](https://github.com/slsfi/historiskarecept-frontend/commit/f38daeee845d27bcfe636dff1d885b1bd40724c0))
+- Article ToC background color. ([bad7e6b](https://github.com/slsfi/historiskarecept-frontend/commit/bad7e6b4747795b69dfe88134a7d650914159482))
 
 
 
@@ -1183,6 +1187,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.1.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.8.2-production.1...2.1.0-production.1
 [1.8.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.7.0-production.1...1.8.2-production.1
 [1.7.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.5-production.1...1.7.0-production.1
 [1.6.5-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.4-production.1...1.6.5-production.1
