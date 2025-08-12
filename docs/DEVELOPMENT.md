@@ -124,11 +124,6 @@ npm install @ionic/angular @ionic/angular-server
 ```
 
 
-### [`epubjs`][npm_epubjs]
-
-Library for rendering ePub documents in the browser, used by the `epub-viewer` component in the app. It is poorly documented and not actively maintained anymore. It works without problems only in Firefox.
-
-
 ### [`express`][npm_express]
 
 Framework for running a web server in Node.js. This library is required by Angular to enable server-side rendering.
@@ -147,6 +142,11 @@ Iconset especially intended to be used with Ionic.
 ### [`marked`][npm_marked]
 
 SSR-compatible Markdown parser. Parses Markdown to HTML. Any HTML in the Markdown is passed through as it is.
+
+
+### [`marked-custom-heading-id`][npm_marked-custom-heading-id]
+
+An extension to `marked` supporting adding custom ids to headings in the [Markdown Extended Syntax](https://www.markdownguide.org/extended-syntax/#heading-ids): `# heading {#custom-id}`.
 
 
 ### [`marked-footnote`][npm_marked-footnote]
@@ -198,6 +198,7 @@ Angular testing frameworks, not in use.
 [npm_htmlparser2]: https://www.npmjs.com/package/htmlparser2
 [npm_ionicons]: https://www.npmjs.com/package/ionicons
 [npm_marked]: https://www.npmjs.com/package/marked
+[npm_marked-custom-heading-id]: https://www.npmjs.com/package/marked-custom-heading-id
 [npm_marked-footnote]: https://www.npmjs.com/package/marked-footnote
 [npm_rxjs]: https://www.npmjs.com/package/rxjs
 [npm_tslib]: https://www.npmjs.com/package/tslib
