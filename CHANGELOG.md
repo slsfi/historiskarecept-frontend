@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.1.0-granska.1] – 2025-08-12
+
 ### Changed
 
-- Update to base version [`2.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.1.0) from upstream, original repository.
-- Article ToC background color.
+- Update to base version [`2.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.1.0) from upstream, original repository. ([064b234](https://github.com/slsfi/historiskarecept-frontend/commit/064b2346546df2263e4043ec3f500b0eeacb7a24))
+- Article ToC background color. ([686d769](https://github.com/slsfi/historiskarecept-frontend/commit/686d7694d346acea15a4fe485bb3d13437241e0d))
 
 
 
@@ -1250,6 +1254,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.1.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.8.2-granska.1...2.1.0-granska.1
 [1.8.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.7.0-granska.1...1.8.2-granska.1
 [1.7.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.5-granska.1...1.7.0-granska.1
 [1.6.5-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.4-granska.1...1.6.5-granska.1
