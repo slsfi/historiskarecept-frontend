@@ -212,6 +212,10 @@ ion-app[class][class] {
   --side-menu-selected-background-color:         #ececec;
 }
 
+page-article[class][class] {
+  --intro-toc-background-color: var(--side-menu-background-color);
+}
+
 /* Custom, project specific styles */
 
 /* Home page */
