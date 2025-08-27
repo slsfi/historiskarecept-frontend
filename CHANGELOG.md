@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Add the ”Raukko” collection to the config.
+
 
 
 ## [2.1.0-granska.1] – 2025-08-12
