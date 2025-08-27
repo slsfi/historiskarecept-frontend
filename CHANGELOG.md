@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Added
+
+- Cover images for the ”Raukko” collection.
+
 
 
 ## [2.1.0-granska.2] – 2025-08-27
