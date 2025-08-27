@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.1.0-granska.3] – 2025-08-27
+
 ### Added
 
-- Cover images for the ”Raukko” collection.
+- Cover images for the ”Raukko” collection. ([0d151f6](https://github.com/slsfi/historiskarecept-frontend/commit/0d151f604f2860ccdf3b49437959ce9fa2f765e3))
 
 
 
@@ -1266,6 +1270,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.1.0-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.2...2.1.0-granska.3
 [2.1.0-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.1...2.1.0-granska.2
 [2.1.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.8.2-granska.1...2.1.0-granska.1
 [1.8.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.7.0-granska.1...1.8.2-granska.1
