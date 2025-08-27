@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.1.0-granska.2] – 2025-08-27
+
 ### Changed
 
-- Add the ”Raukko” collection to the config.
+- Add the ”Raukko” collection to the config. ([5dd6dcd](https://github.com/slsfi/historiskarecept-frontend/commit/5dd6dcd3ee41d748f7905447c5f5fe015a7ae111))
 
 
 
@@ -1258,6 +1262,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.1.0-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.1...2.1.0-granska.2
 [2.1.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.8.2-granska.1...2.1.0-granska.1
 [1.8.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.7.0-granska.1...1.8.2-granska.1
 [1.7.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.6.5-granska.1...1.7.0-granska.1
