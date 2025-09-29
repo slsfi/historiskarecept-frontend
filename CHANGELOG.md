@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.1.0-granska.4] – 2025-09-29
+
 ### Changed
 
-- Add the ”af Schultén” collection to the config.
+- Add the ”af Schultén” collection to the config. ([bbe0da5](https://github.com/slsfi/historiskarecept-frontend/commit/bbe0da574720f6923740b890c74ed6e34ee223fb))
 
 
 
@@ -1274,6 +1278,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.1.0-granska.4]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.3...2.1.0-granska.4
 [2.1.0-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.2...2.1.0-granska.3
 [2.1.0-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.1...2.1.0-granska.2
 [2.1.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.8.2-granska.1...2.1.0-granska.1
