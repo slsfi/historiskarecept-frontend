@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Added
+
+- Cover image for af Schultén collection.
+
 
 
 ## [2.1.0-granska.4] – 2025-09-29
