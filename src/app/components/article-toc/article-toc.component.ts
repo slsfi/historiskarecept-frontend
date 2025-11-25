@@ -2,7 +2,7 @@ import { NgTemplateOutlet } from '@angular/common';
 import { ChangeDetectionStrategy, Component, computed, inject, input } from '@angular/core';
 import { RouterLink } from '@angular/router';
 
-import { HeadingNode } from '@models/article.model';
+import { HeadingNode } from '@models/article.models';
 import { HtmlParserService } from '@services/html-parser.service';
 
 
@@ -14,10 +14,10 @@ import { HtmlParserService } from '@services/html-parser.service';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class ArticleTocComponent {
+  private readonly htmlParser = inject(HtmlParserService);
+
   htmlContent = input<string | null>(null);
   tocMenuOpen = input<boolean>(false);
-
-  private readonly htmlParser = inject(HtmlParserService);
 
   readonly nestedHeadings = computed<HeadingNode[]>(() => {
     const html = this.htmlContent();
