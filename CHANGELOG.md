@@ -8,13 +8,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.3.2-granska.1] – 2025-11-25
+
 ### Added
 
-- Cover image for af Schultén collection.
+- Cover image for af Schultén collection. ([476a185](https://github.com/slsfi/historiskarecept-frontend/commit/476a1850e627421a10cc81b23da3dc642fd503ec))
 
 ### Changed
 
-- Update to base version [`2.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.3.2) from upstream, original repository.
+- Update to base version [`2.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.3.2) from upstream, original repository. ([7d045fa](https://github.com/slsfi/historiskarecept-frontend/commit/7d045fa33b0c3a38bce7bd7b9b819521da589a48))
 
 
 
@@ -1453,6 +1457,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.3.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.4...2.3.2-granska.1
 [2.1.0-granska.4]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.3...2.1.0-granska.4
 [2.1.0-granska.3]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.2...2.1.0-granska.3
 [2.1.0-granska.2]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.1...2.1.0-granska.2
