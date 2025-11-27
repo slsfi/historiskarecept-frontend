@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
 import { catchError, map, Observable, of } from 'rxjs';
 import { Parser } from 'htmlparser2';
 import { DomHandler } from 'domhandler';
@@ -6,29 +6,24 @@ import { existsOne, findAll, findOne, getChildren, getAttributeValue, isTag } fr
 import { render } from 'dom-serializer';
 
 import { config } from '@config';
-import { HeadingNode } from '@models/article.model';
+import { HeadingNode } from '@models/article.models';
+import { TextKey } from '@models/collection.models';
+import { Illustration } from '@models/illustration.models';
+import { ReadingText } from '@models/readingtext.models';
 import { CollectionContentService } from '@services/collection-content.service';
+import { isFileNotFoundHtml } from '@utility-functions';
 
 
 @Injectable({
   providedIn: 'root',
 })
 export class HtmlParserService {
-  private addTEIClassNames: boolean = true;
-  private apiURL: string = '';
-  private mediaCollectionMappings: any = {};
-  private replaceImageAssetsPaths: boolean = true;
+  private collectionContentService = inject(CollectionContentService);
 
-  constructor(
-    private collectionContentService: CollectionContentService
-  ) {
-    const apiBaseURL = config.app?.backendBaseURL ?? '';
-    const projectName = config.app?.projectNameDB ?? '';
-    this.apiURL = apiBaseURL + '/' + projectName;
-    this.mediaCollectionMappings = config.collections?.mediaCollectionMappings ?? {};
-    this.addTEIClassNames = config.collections?.addTEIClassNames ?? true;
-    this.replaceImageAssetsPaths = config.collections?.replaceImageAssetsPaths ?? true;
-  }
+  private readonly addTEIClassNames: boolean = config.collections?.addTEIClassNames ?? true;
+  private readonly apiURL: string = `${config.app?.backendBaseURL ?? ''}/${config.app?.projectNameDB ?? ''}`;
+  private readonly mediaCollectionMappings: any = config.collections?.mediaCollectionMappings ?? {};
+  private readonly replaceImageAssetsPaths: boolean = config.collections?.replaceImageAssetsPaths ?? true;
 
   postprocessReadingText(text: string, collectionId: string): string {
     // Fix image paths if config option for this enabled
@@ -71,21 +66,15 @@ export class HtmlParserService {
     return text;
   }
 
-  getReadingTextIllustrations(id: string): Observable<any> {
-    return this.collectionContentService.getReadingText(id).pipe(
-      map((res) => {
-        const images: any[] = [];
-        if (
-          res &&
-          res.content &&
-          res.content !== '<html xmlns="http://www.w3.org/1999/xhtml"><head></head><body>File not found</body></html>'
-        ) {
+  getReadingTextIllustrations(textKey: TextKey): Observable<Illustration[]> {
+    return this.collectionContentService.getReadingText(textKey).pipe(
+      map((rt: ReadingText) => {
+        const images: Illustration[] = [];
+        if (rt?.html && !isFileNotFoundHtml(rt.html)) {
           const _apiURL = this.apiURL;
-          const collectionID = String(id).split('_')[0];
-          let text = res.content as string;
-          text = this.postprocessReadingText(text, collectionID);
-
+          const collectionID = textKey.collectionID;
           const galleryId = this.mediaCollectionMappings?.[collectionID];
+          let text = this.postprocessReadingText(rt.html, collectionID);
 
           // Parse the read text html to get all illustrations in it using
           // SSR compatible htmlparser2
@@ -97,14 +86,17 @@ export class HtmlParserService {
                   if (!attributes.class?.includes('hide-illustration')) {
                     illustrationClass = 'visible-illustration';
                   }
-                  const image = { src: attributes.src, class: illustrationClass };
+                  const image: Illustration = {
+                    src: attributes.src,
+                    class: illustrationClass
+                  };
                   images.push(image);
                 } else if (
                   attributes.class?.includes('doodle') &&
                   attributes['data-id'] &&
                   galleryId
                 ) {
-                  const image = {
+                  const image: Illustration = {
                     src: `${_apiURL}/gallery/get/${galleryId}/`
                           + attributes['data-id'].replace('tag_', '') + '.jpg',
                     class: 'doodle'

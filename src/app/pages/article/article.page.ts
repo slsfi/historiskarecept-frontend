@@ -1,12 +1,11 @@
-import { Component, ElementRef, Inject, LOCALE_ID, NgZone, OnDestroy, OnInit, Renderer2 } from '@angular/core';
+import { Component, ElementRef, LOCALE_ID, NgZone, OnDestroy, OnInit, Renderer2, inject } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ModalController, PopoverController } from '@ionic/angular';
 import { Observable, Subscription, switchMap, tap } from 'rxjs';
 
 import { config } from '@config';
 import { ReferenceDataModal } from '@modals/reference-data/reference-data.modal';
-import { Article } from '@models/article.model';
-import { Textsize } from '@models/textsize.model';
+import { Article } from '@models/article.models';
 import { ViewOptionsPopover } from '@popovers/view-options/view-options.popover';
 import { MarkdownService } from '@services/markdown.service';
 import { PlatformService } from '@services/platform.service';
@@ -22,47 +21,33 @@ import { isBrowser } from '@utility-functions';
   standalone: false
 })
 export class ArticlePage implements OnInit, OnDestroy {
+  private elementRef = inject(ElementRef);
+  private mdService = inject(MarkdownService);
+  private modalController = inject(ModalController);
+  private ngZone = inject(NgZone);
+  private platformService = inject(PlatformService);
+  private popoverCtrl = inject(PopoverController);
+  private renderer2 = inject(Renderer2);
+  private route = inject(ActivatedRoute);
+  private router = inject(Router);
+  private scrollService = inject(ScrollService);
+  viewOptionsService = inject(ViewOptionsService);
+  private activeLocale = inject(LOCALE_ID);
+
+  readonly showTextDownloadButton: boolean = config.page?.article?.showTextDownloadButton ?? false;
+  readonly showURNButton: boolean = config.page?.article?.showURNButton ?? false;
+
   article: Article | null = null;
   enableTOC: boolean = true;
   markdownText$: Observable<string | null>;
   mobileMode: boolean = false;
-  showTextDownloadButton: boolean = false;
-  showURNButton: boolean = true;
-  textsize: Textsize = Textsize.Small;
-  textsizeSubscription: Subscription | null = null;
-  tocMenuOpen: boolean = true;
-
-  TextsizeEnum = Textsize;
+  tocMenuOpen: boolean = false;
 
   private fragmentSubscription?: Subscription;
   private unlistenClickEvents?: () => void;
 
-  constructor(
-    private elementRef: ElementRef,
-    private mdService: MarkdownService,
-    private modalController: ModalController,
-    private ngZone: NgZone,
-    private platformService: PlatformService,
-    private popoverCtrl: PopoverController,
-    private renderer2: Renderer2,
-    private route: ActivatedRoute,
-    private router: Router,
-    private scrollService: ScrollService,
-    public viewOptionsService: ViewOptionsService,
-    @Inject(LOCALE_ID) private activeLocale: string
-  ) {
-    this.showTextDownloadButton = config.page?.article?.showTextDownloadButton ?? true;
-    this.showURNButton = config.page?.article?.showURNButton ?? true;
-  }
-
   ngOnInit() {
     this.mobileMode = this.platformService.isMobile();
-
-    this.textsizeSubscription = this.viewOptionsService.getTextsize().subscribe(
-      (textsize: Textsize) => {
-        this.textsize = textsize;
-      }
-    );
 
     if (isBrowser()) {
       this.setUpTextListeners();
@@ -79,7 +64,12 @@ export class ArticlePage implements OnInit, OnDestroy {
         this.article = config.articles?.find(
           (article: Article) => (article.routeName === name) && article.language === this.activeLocale
         ) ?? null;
+
         this.enableTOC = this.article?.enableTOC ?? true;
+
+        if (this.article && !this.mobileMode && !this.tocMenuOpen) {
+          this.tocMenuOpen = true;
+        }
       }),
       switchMap(({name}) => {
         const id = this.article?.id ?? name;
@@ -95,7 +85,6 @@ export class ArticlePage implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.unlistenClickEvents?.();
     this.fragmentSubscription?.unsubscribe();
-    this.textsizeSubscription?.unsubscribe();
   }
 
   async showViewOptionsPopover(event: any) {

@@ -522,6 +522,12 @@
         <target>Piilota rajaukset</target>
       </segment>
     </unit>
+    <unit id="ElasticSearch.Language">
+      <segment state="initial">
+        <source>Språk</source>
+        <target>Kieli</target>
+      </segment>
+    </unit>
     <unit id="ElasticSearch.LetterReceiverLocation">
       <segment state="initial">
         <source>Mottagarort (brev)</source>
@@ -904,6 +910,12 @@
       <segment state="initial">
         <source>Personkategorier</source>
         <target>Henkilökategoriat</target>
+      </segment>
+    </unit>
+    <unit id="Language.Undefined">
+      <segment state="initial">
+        <source>odefinierat</source>
+        <target>Määrittämätön</target>
       </segment>
     </unit>
     <unit id="Legend.Legend">
@@ -1552,6 +1564,18 @@
       <segment state="initial">
         <source>Webbplatsens titel</source>
         <target>Sivuston otsikko</target>
+      </segment>
+    </unit>
+    <unit id="TextChanger.NextLabel">
+      <segment state="initial">
+        <source>Följande text</source>
+        <target>Seuraava teksti</target>
+      </segment>
+    </unit>
+    <unit id="TextChanger.PrevLabel">
+      <segment state="initial">
+        <source>Föregående text</source>
+        <target>Edellinen teksti</target>
       </segment>
     </unit>
     <unit id="TopMenu.About">
