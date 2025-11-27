@@ -14,6 +14,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Changed
 
+- Update config with af Schultén collection.
 - Update to base version [`2.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.3.2) from upstream, original repository.
 
 
