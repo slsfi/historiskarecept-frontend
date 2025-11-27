@@ -8,14 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.3.2-production.1] – 2025-11-27
+
 ### Added
 
-- Cover image for af Schultén collection.
+- Cover image for af Schultén collection. ([c539bd6](https://github.com/slsfi/historiskarecept-frontend/commit/c539bd6f89bd12bd38dbf2727294bd1b91f8cef6))
 
 ### Changed
 
-- Update config with af Schultén collection.
-- Update to base version [`2.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.3.2) from upstream, original repository.
+- Update config with af Schultén collection. ([692254e](https://github.com/slsfi/historiskarecept-frontend/commit/692254ee6ff1c3b6a77ecb6991817a269da854f2))
+- Update to base version [`2.3.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.3.2) from upstream, original repository. ([a300f36](https://github.com/slsfi/historiskarecept-frontend/commit/a300f36c89ac6bcb9a90443bb62326a71485a703))
 
 
 
@@ -1371,6 +1375,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.3.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.1-production.1...2.3.2-production.1
 [2.1.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-production.1...2.1.1-production.1
 [2.1.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.8.2-production.1...2.1.0-production.1
 [1.8.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.7.0-production.1...1.8.2-production.1
