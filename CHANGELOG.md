@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Added
+
+- Cover image for af Schultén collection.
+
 
 
 ## [2.1.1-production.1] – 2025-08-13
