@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Removed
+
+- Code comment from Matomo code snippet in `index.html`.
+
 
 
 ## [2.4.2-production.1] – 2025-12-18
