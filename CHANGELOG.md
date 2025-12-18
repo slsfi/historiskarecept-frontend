@@ -8,6 +8,50 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+### Changed
+
+- Update to base version [`2.4.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.4.2) from upstream, original repository.
+
+
+
+## [2.4.2] – 2025-12-18
+
+### Changed
+
+- Deps: update `angular/cli` to 20.3.13. ([5fa4eb0](https://github.com/slsfi/digital-edition-frontend-ng/commit/5fa4eb0759a2b71922020143b3ff42947ff7627b))
+- Deps (dev): update `@types/node` to 22.19.3. ([6ddc09c](https://github.com/slsfi/digital-edition-frontend-ng/commit/6ddc09c665a4040862c8ac1b092d83e56406842a))
+- Deps: update transitive dependencies. ([9f38091](https://github.com/slsfi/digital-edition-frontend-ng/commit/9f38091d50a5284d0bc91d5dca18ae0efc9b8f55))
+
+
+
+## [2.4.1] – 2025-12-02
+
+### Changed
+
+- Deps: update `express` to 5.2.1. ([f78059c](https://github.com/slsfi/digital-edition-frontend-ng/commit/f78059cf66e0d36256f8986e2f945b0883c3410f))
+- Deps (dev): update `@types/express` to 5.0.6. ([211e261](https://github.com/slsfi/digital-edition-frontend-ng/commit/211e2611816140114430cfdb22d3356f02a1631b))
+- Deps (dev): update `jasmine-core` to 5.13.0. ([f78059c](https://github.com/slsfi/digital-edition-frontend-ng/commit/f78059cf66e0d36256f8986e2f945b0883c3410f))
+
+
+
+## [2.4.0] – 2025-12-01
+
+### Added
+
+- Support `language` property of collection menu items. ([bbde939](https://github.com/slsfi/digital-edition-frontend-ng/commit/bbde93903dce09b3264ed345a2a88b07fcfb5fb4))
+
+### Changed
+
+- Deps: update `angular/cli` to 20.3.12 and `angular/core` to 20.3.15. ([7ac3136](https://github.com/slsfi/digital-edition-frontend-ng/commit/7ac313673d8f9fa2e9bf08e333afb81b6948b41e), [0c6fc7d](https://github.com/slsfi/digital-edition-frontend-ng/commit/0c6fc7d96b6d8b597d1516c59c4dae2540fa1b5d))
+- Deps: update transitive dependencies. ([4fb05a8](https://github.com/slsfi/digital-edition-frontend-ng/commit/4fb05a831c431514fbd6a72f16a7c90e25a816c3))
+
+### Fixed
+
+- Generate sitemap prebuild-script: only include articles in default locale. ([bff9a2c](https://github.com/slsfi/digital-edition-frontend-ng/commit/bff9a2c78df1c1ab13fbd4eddaea5d3ad5ce8a99))
+- Canonical and alternate page URLs for articles when multiple site languages. ([58a1230](https://github.com/slsfi/digital-edition-frontend-ng/commit/58a12306db67cf8d0f50b824e781825bf81d365b))
+- Scroll to top button alignment on index page. ([d2af880](https://github.com/slsfi/digital-edition-frontend-ng/commit/d2af880d646180f710fe4e59fbf652ebe3070ff9))
+- Introduction title in download texts modal when a collection has a custom introduction title. ([a583686](https://github.com/slsfi/digital-edition-frontend-ng/commit/a583686ac68457686f3f046bed37b0f020ad7128))
+
 
 
 ## [2.3.2-production.1] – 2025-11-27
@@ -1325,7 +1369,10 @@ siteLogoDimensions: {
 
 
 
-[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.3.2...HEAD
+[unreleased]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.4.2...HEAD
+[2.4.2]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.4.1...2.4.2
+[2.4.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.4.0...2.4.1
+[2.4.0]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.3.2...2.4.0
 [2.3.2]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.3.1...2.3.2
 [2.3.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.3.0...2.3.1
 [2.3.0]: https://github.com/slsfi/digital-edition-frontend-ng/compare/2.2.2...2.3.0
