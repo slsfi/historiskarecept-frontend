@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.4.2-production.1] – 2025-12-18
+
 ### Changed
 
-- Update to base version [`2.4.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.4.2) from upstream, original repository.
-- Update Matomo analytics code snippet.
+- Update to base version [`2.4.2`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.4.2) from upstream, original repository. ([b95e9d0](https://github.com/slsfi/historiskarecept-frontend/commit/b95e9d02440ab2106001aa21cdd55a89d9626973))
+- Update Matomo analytics code snippet. ([85b0f58](https://github.com/slsfi/historiskarecept-frontend/commit/85b0f585643c25c984df2d9008e1273783a4df6e))
 
 
 
@@ -1423,6 +1427,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.4.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.3.2-production.1...2.4.2-production.1
 [2.3.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.1-production.1...2.3.2-production.1
 [2.1.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-production.1...2.1.1-production.1
 [2.1.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/1.8.2-production.1...2.1.0-production.1
