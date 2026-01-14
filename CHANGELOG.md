@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 ### Changed
 
 - Update to base version [`2.4.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.4.3) from upstream, original repository.
+- Publish Raukko and Roslin collections.
 
 
 
