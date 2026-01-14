@@ -8,14 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.4.3-production.1] – 2026-01-14
+
 ### Changed
 
-- Update to base version [`2.4.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.4.3) from upstream, original repository.
-- Publish Raukko and Roslin collections.
+- Update to base version [`2.4.3`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.4.3) from upstream, original repository. ([48a378b](https://github.com/slsfi/historiskarecept-frontend/commit/48a378be8954d55b129d4cace274ba55b1c9d995))
+- Publish Raukko and Roslin collections. ([473833b](https://github.com/slsfi/historiskarecept-frontend/commit/473833b0c36cc5c8e255eaecbb144f25a9ca9025))
 
 ### Fixed
 
-- Repository and branch `package-lock.json` URL in `README.md`.
+- Repository and branch `package-lock.json` URL in `README.md`. ([8c1dea2](https://github.com/slsfi/historiskarecept-frontend/commit/8c1dea279ae70ce6bdaf3c4bc6a3e3c9e2534d96))
 
 
 
@@ -1457,6 +1461,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.4.3-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.2-production.2...2.4.3-production.1
 [2.4.2-production.2]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.2-production.1...2.4.2-production.2
 [2.4.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.3.2-production.1...2.4.2-production.1
 [2.3.2-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.1-production.1...2.3.2-production.1
