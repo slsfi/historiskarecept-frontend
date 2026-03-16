@@ -2,7 +2,6 @@
 
 This branch contains the internal, ”granska” frontend app of the digital edition Historiska recept, [https://granska-historiskarecept.sls.fi/][granska-historiskarecept]. It is based on [`digital-edition-frontend-ng`][digital-edition-frontend-ng], the frontend app of the [SLS][SLS] platform for building digital edition web apps.
 
-
 The app is built on [Angular][angular] and uses [Ionic][ionic] web components.
 
 <p>
