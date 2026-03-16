@@ -8,18 +8,22 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.6.1-production.1] – 2026-03-16
+
 ### Changed
 
-- Update to base version [`2.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.1) from upstream, original repository.
-- Enable feature based routes and separate cookie policy page in config.
+- Update to base version [`2.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.1) from upstream, original repository. ([22eb9bb](https://github.com/slsfi/historiskarecept-frontend/commit/22eb9bb155cd024c90222ca3c95986ecb3a43134))
+- Enable feature based routes and separate cookie policy page in config. ([394a20f](https://github.com/slsfi/historiskarecept-frontend/commit/394a20fcd44f2329b1371cd85b94d1a9e0528d43))
 
 ### Fixed
 
-- Badge URLs in `README.md`.
+- Badge URLs in `README.md`. ([a3120b6](https://github.com/slsfi/historiskarecept-frontend/commit/a3120b6cde6c5b15eb08e639391b4c8180ab3edc))
 
 ### Removed
 
-- Cookie banner CSS from `custom.scss`.
+- Cookie banner CSS from `custom.scss`. ([87aa779](https://github.com/slsfi/historiskarecept-frontend/commit/87aa7799ccf447dad3ce69ec061ce41448f4fe85))
 
 
 
@@ -1684,6 +1688,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.6.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.6-granska.1...2.6.1-granska.1
 [2.4.6-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.2-granska.1...2.4.6-granska.1
 [2.4.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.3.2-granska.1...2.4.2-granska.1
 [2.3.2-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.1.0-granska.4...2.3.2-granska.1
