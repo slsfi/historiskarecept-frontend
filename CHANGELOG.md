@@ -8,14 +8,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [2.6.1-production.1] – 2026-03-17
+
 ### Changed
 
-- Update to base version [`2.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.1) from upstream, original repository.
-- Enable feature based routes and separate cookie policy page in config.
+- Update to base version [`2.6.1`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/2.6.1) from upstream, original repository. ([81f2df2](https://github.com/slsfi/historiskarecept-frontend/commit/81f2df2c46dee5c65cf40b031ade3a3077836d69))
+- Enable feature based routes and separate cookie policy page in config. ([33a1d1b](https://github.com/slsfi/historiskarecept-frontend/commit/33a1d1ba977422d98a6b039e0b041c109b78db87))
 
 ### Removed
 
-- Cookie banner CSS from `custom.scss`.
+- Cookie banner CSS from `custom.scss`. ([84f3e42](https://github.com/slsfi/historiskarecept-frontend/commit/84f3e42de2a154ba8669753c05d3805b2cfa4659))
 
 
 
@@ -1621,6 +1625,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[2.6.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.6-production.1...2.6.1-production.1
 [2.4.6-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.3-production.1...2.4.6-production.1
 [2.4.3-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.2-production.2...2.4.3-production.1
 [2.4.2-production.2]: https://github.com/slsfi/historiskarecept-frontend/compare/2.4.2-production.1...2.4.2-production.2
