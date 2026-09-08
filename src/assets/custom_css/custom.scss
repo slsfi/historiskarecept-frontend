@@ -290,33 +290,19 @@ page-article[class][class] {
 
 /* Home page */
 page-home {
-  .title-wrapper .banner-title {
-    background-color: var(--primary-color);
-    color: var(--primary-color-contrast);
-    font-weight: bold;
-    opacity: 1;
-  }
+  --banner-title-background-color: var(--primary-color);
+  --banner-title-color: var(--primary-color-contrast);
+  --banner-title-font-weight: bold;
+  --portrait-banner-background-color: #250101;
+  --portrait-site-title-font-family: hummingbird, sans-serif;
+  --portrait-site-title-font-size: 5em;
+  --text-content-max-width: 900px;
 
   .portrait-mode {
-    .banner {
-      background-color: #250101;
-    }
     .title-wrapper .site-title.site-title {
-      font-family: hummingbird, sans-serif;
-      font-weight: 400;
-      font-style: normal;
-      font-size: 5em;
       margin-top: 5.5rem;
-      text-align: center;
       line-height: 0.6;
     }
-    .text-content .footer.footer.footer.footer {
-      text-align: center;
-    }
-  }
-
-  .portrait-mode .text-content .search-bar-wrapper {
-    margin-left: auto !important;
   }
 }
 
