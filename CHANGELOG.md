@@ -8,9 +8,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [4.0.0-production.1] – 2026-10-19
+
 ### Changed
 
-- Update to base version [`4.0.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.0.0) from upstream, original repository.
+- Update to base version [`4.0.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.0.0) from upstream, original repository. ([08e12a7](https://github.com/slsfi/historiskarecept-frontend/commit/08e12a7923f0c1bf2f246893119160f0a82412a6), [4b824c2](https://github.com/slsfi/historiskarecept-frontend/commit/4b824c2fe4801e9cd3f7655c6f45545fa064eaf4))
 
 
 
@@ -2105,6 +2109,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[4.0.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/3.1.1-production.1...4.0.0-production.1
 [3.1.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/3.0.1-production.1...3.1.1-production.1
 [3.0.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.7.9-production.1...3.0.1-production.1
 [2.7.9-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.7.5-production.1...2.7.9-production.1
