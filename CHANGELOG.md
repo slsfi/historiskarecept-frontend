@@ -8,6 +8,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [4.1.0-production.1] – 2026-10-23
+
 ### Changed
 
 - Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository. ([446884b](https://github.com/slsfi/historiskarecept-frontend/commit/446884b1307d3ab15650c95739e2c7de8e0375a2))
