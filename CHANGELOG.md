@@ -8,10 +8,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ## Unreleased
 
+
+
+## [4.1.0-granska.1] – 2026-10-23
+
 ### Changed
 
-- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository.
-- Enable static, localized collection cover metadata.
+- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository. ([08092d1](https://github.com/slsfi/historiskarecept-frontend/commit/08092d1265df613f73a889dfe2bb443f3977b724))
+- Enable static, localized collection cover metadata. ([8573289](https://github.com/slsfi/historiskarecept-frontend/commit/857328954d1556121878e19bc2b7c99eef15f81b))
 
 
 
@@ -2202,6 +2206,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[4.1.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/4.0.0-granska.1...4.1.0-granska.1
 [4.0.0-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/3.1.1-granska.1...4.0.0-granska.1
 [3.1.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/3.0.1-granska.1...3.1.1-granska.1
 [3.0.1-granska.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.7.9-granska.1...3.0.1-granska.1
