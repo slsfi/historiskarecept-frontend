@@ -10,8 +10,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/), and this
 
 ### Changed
 
-- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository.
-- Enable static, localized collection cover metadata.
+- Update to base version [`4.1.0`](https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/4.1.0) from upstream, original repository. ([446884b](https://github.com/slsfi/historiskarecept-frontend/commit/446884b1307d3ab15650c95739e2c7de8e0375a2))
+- Enable static, localized collection cover metadata. ([fb90981](https://github.com/slsfi/historiskarecept-frontend/commit/fb90981c02f73d4b9c54a46befc8edd0004922c4))
 
 
 
@@ -2139,6 +2139,7 @@ siteLogoDimensions: {
 [1.0.1]: https://github.com/slsfi/digital-edition-frontend-ng/compare/v1.0.0...v1.0.1
 [1.0.0]: https://github.com/slsfi/digital-edition-frontend-ng/releases/tag/v1.0.0
 
+[4.1.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/4.0.0-production.1...4.1.0-production.1
 [4.0.0-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/3.1.1-production.1...4.0.0-production.1
 [3.1.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/3.0.1-production.1...3.1.1-production.1
 [3.0.1-production.1]: https://github.com/slsfi/historiskarecept-frontend/compare/2.7.9-production.1...3.0.1-production.1
